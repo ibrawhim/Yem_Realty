@@ -7,11 +7,13 @@ import { IoChevronUp } from "react-icons/io5";
 import { TbHelpHexagon } from "react-icons/tb";
 import { VscGitPullRequestNewChanges } from "react-icons/vsc";
 
-const Navbar = () => {
+const Navbar = ({isSectionVisible }) => {
+  console.log(isSectionVisible);
 
   const [chevronOne, setchevronOne] = useState(false)
   const [chevronTwo, setchevronTwo] = useState(false)
   
+ 
   const downOne = () => {
     setchevronOne(true)
     setchevronTwo(false)
@@ -54,7 +56,7 @@ const Navbar = () => {
             </div>
             <a className= 'hidden md:block bg-red-500 px-2 my-6 h-[25px] rounded font-semibold' href="">Join Us</a>
             {/* <div className='md:hidden my-7'><FaBars /></div> */}
-        <section className={chevronOne==false?'hidden' :   'absolute  top-[50px]'} id='firstSection'>
+        <section style={{ display: isSectionVisible ? '' : 'none'}} className={chevronOne==false? 'hidden' :   'absolute  top-[50px]'} id='firstSection'>
           <div className='border w-[400px] flex p-5 ms-40 me-20 gap-20 justify-center items-center bg-white rounded z-[2] relative'>
             <div>
               <div className='flex gap-2'>
