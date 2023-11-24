@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../images/ylogo.png'
 import { FaHouse } from "react-icons/fa6";
 import { MdOutlineRealEstateAgent } from "react-icons/md";
@@ -9,30 +9,25 @@ import { VscGitPullRequestNewChanges } from "react-icons/vsc";
 
 const Navbar = () => {
 
-  const upOne = () => {
-      document.getElementById('upOne').style.display = 'none'
-      document.getElementById('downOne').style.display = 'block'
-      document.getElementById('firstSection').style.display = 'block'
-      document.getElementById('secondSection').style.display = 'none'
-  }
+  const [chevronOne, setchevronOne] = useState(false)
+  const [chevronTwo, setchevronTwo] = useState(false)
+  
   const downOne = () => {
-    // alert('herre')
-        document.getElementById('upOne').style.display = 'block'
-        document.getElementById('downOne').style.display = 'none'
-        document.getElementById('firstSection').style.display = 'none'
-    }
-    const upTwo = () => {
-      document.getElementById('upTwo').style.display = 'none'
-      document.getElementById('downTwo').style.display = 'block'
-      document.getElementById('secondSection').style.display = 'block'
-      document.getElementById('firstSection').style.display = 'none'
+    setchevronOne(true)
+    setchevronTwo(false)
+  }
+  const upOne = () => {
+    setchevronOne(false)
   }
   const downTwo = () => {
-    // alert('herre')
-        document.getElementById('upTwo').style.display = 'block'
-        document.getElementById('downTwo').style.display = 'none'
-        document.getElementById('secondSection').style.display = 'none'
-    }
+    setchevronTwo(true)
+    setchevronOne(false)
+  }
+  const upTwo = () => {
+    setchevronTwo(false)
+  }
+
+  
   return (
     <>
     <div className='hidden md:block bg-white'>
@@ -42,8 +37,8 @@ const Navbar = () => {
                 <div className='flex gap-2'>
                     <p>Explore</p>
                     <p className='mt-[3px]'>
-                      <button onClick={upOne} id='upOne'><IoChevronDownOutline /></button>
-                      <button onClick={downOne} id='downOne' className='hidden'><IoChevronUp /></button>
+                      <button onClick={downOne} className={chevronOne==true? 'hidden': ''}  id='upOne'><IoChevronDownOutline /></button>
+                      <button  onClick={upOne} className={chevronOne==false? 'hidden':  '' }><IoChevronUp /></button>
                     </p>
                 </div>
                 <div>About</div>
@@ -52,14 +47,14 @@ const Navbar = () => {
                 <div className='flex gap-2'>
                     <p>More</p>
                     <p className='mt-[3px]'>
-                      <button onClick={upTwo} id='upTwo'><IoChevronDownOutline /></button>
-                      <button onClick={downTwo} id='downTwo' className='hidden'><IoChevronUp /></button>
+                      <button onClick={downTwo} className={chevronTwo==true? 'hidden': ''}  id='upOne'><IoChevronDownOutline /></button>
+                      <button  onClick={upTwo} className={chevronTwo==false?'hidden': ''}><IoChevronUp /></button>
                     </p>
                 </div>
             </div>
-            <a className='hidden md:block bg-red-500 px-2 my-6 h-[25px] rounded font-semibold' href="">Join Us</a>
+            <a className= 'hidden md:block bg-red-500 px-2 my-6 h-[25px] rounded font-semibold' href="">Join Us</a>
             {/* <div className='md:hidden my-7'><FaBars /></div> */}
-        <section className='absolute  top-[50px] hidden' id='firstSection'>
+        <section className={chevronOne==false?'hidden' :   'absolute  top-[50px]'} id='firstSection'>
           <div className='border w-[400px] flex p-5 ms-40 me-20 gap-20 justify-center items-center bg-white rounded z-[2] relative'>
             <div>
               <div className='flex gap-2'>
@@ -75,7 +70,7 @@ const Navbar = () => {
             </div>
           </div>
         </section>
-        <section className='absolute w-[200px] top-[50px] left-[530px]  border p-5 bg-white rounded hidden' id='secondSection'>
+        <section className={chevronTwo==false? 'hidden' :  'absolute w-[200px] top-[50px] left-[530px]  border p-5 bg-white rounded'} id='secondSection'>
           <div className='flex  flex-col'>
           <div className='flex gap-3 mb-5 hover:bg-gray-100 p-1 rounded'>
             <p className='text-red-500 mt-1'><TbHelpHexagon /></p>
