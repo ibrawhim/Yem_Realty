@@ -14,11 +14,10 @@ function App() {
     setIsOpen(!isOpen)
   }
   const handleBodyClick = () => {
-    if(isSectionVisible==true){
-      setSectionVisibility(!isSectionVisible);
-    }else {
-      setSectionVisibility(!isSectionVisible);
-    }
+     if (isSectionVisible==true){
+      setSectionVisibility(!isSectionVisible)
+     }
+     
   };
 
   return (
