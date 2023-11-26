@@ -10,9 +10,11 @@ import Upbar from "./components/Upbar";
 function App() {
   const [isOpen, setIsOpen] = useState(false)
   const [isSectionVisible, setSectionVisibility] = useState(true);
+  
 
   const toggleIsOpen = () => {
-    setIsOpen(!isOpen)
+    setIsOpen(true)
+    console.log(isOpen);
   }
   const handleBodyClick = () => {
      if (isSectionVisible==true){
@@ -24,7 +26,8 @@ function App() {
   return (
     <>
     <Navbar isSectionVisible={isSectionVisible}/>
-    <Upbar/>
+    {/* <div className={isOpen?'block': 'hidden'}><Upbar/></div> */}
+    <div><Upbar/></div>
     <div className="font-[Quicksand]" onClick={handleBodyClick}>
     <ul className='md:hidden shadow block w-screen px-5 flex justify-between top-0 z-[10000] '>
           <li><img src={logo} width={40} className='h-[40px] my-2' alt="" /></li>
