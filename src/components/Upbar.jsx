@@ -21,12 +21,15 @@ const Upbar = () => {
                 </div>
             </div>
             <section>
-                <div className='grid-col-2'>
+                <div className='grid grid-cols-2'>
                     <a href="">About</a>
                     <a href="">Blog</a>
                     <a href="">Docs</a>
                     <a href="">Help Center</a>
                     <a href="">Send Request</a>
+                </div>
+                <div className='flex justify-center items-center text-white bg-black py-1 rounded'>
+                    <a href="">Join</a>
                 </div>
             </section>
         </div>

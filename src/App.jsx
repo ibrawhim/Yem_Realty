@@ -27,14 +27,14 @@ function App() {
     <>
     <Navbar isSectionVisible={isSectionVisible}/>
     {/* <div className={isOpen?'block': 'hidden'}><Upbar/></div> */}
-    <div><Upbar/></div>
     <div className="font-[Quicksand]" onClick={handleBodyClick}>
-    <ul className='md:hidden shadow block w-screen px-5 flex justify-between top-0 z-[10000] '>
+    <ul className='md:hidden shadow block w-screen px-5 flex justify-between  z-[10000] '>
           <li><img src={logo} width={40} className='h-[40px] my-2' alt="" /></li>
           <li className='text-black my-6'>
               <FaBars onClick={toggleIsOpen}/>
           </li>
       </ul>
+    <div className=" fixed top-0"><Upbar/></div>
       <Routes>
         <Route path="/"  element={<Landing/>}/>
       </Routes>
