@@ -16,6 +16,11 @@ function App() {
     setIsOpen(true)
     console.log(isOpen);
   }
+  const handleClick = () => {
+    // console.log('Button clicked!');
+    setIsOpen(false)
+  };
+
   const handleBodyClick = () => {
      if (isSectionVisible==true){
       setSectionVisibility(!isSectionVisible)
@@ -26,15 +31,15 @@ function App() {
   return (
     <>
     <Navbar isSectionVisible={isSectionVisible}/>
-    {/* <div className={isOpen?'block': 'hidden'}><Upbar/></div> */}
+    <div className={isOpen?'block fixed top-0 w-full': 'hidden'}><Upbar onClickHandler={handleClick} /></div>
     <div className="font-[Quicksand]" onClick={handleBodyClick}>
-    <ul className='md:hidden shadow block w-screen px-5 flex justify-between  z-[10000] '>
+    <ul className={isOpen? 'hidden' : 'md:hidden shadow px-5 flex justify-between  z-[10000] '}>
           <li><img src={logo} width={40} className='h-[40px] my-2' alt="" /></li>
           <li className='text-black my-6'>
               <FaBars onClick={toggleIsOpen}/>
           </li>
       </ul>
-    <div className=" fixed top-0"><Upbar/></div>
+    {/* <div><Upbar/></div> */}
       <Routes>
         <Route path="/"  element={<Landing/>}/>
       </Routes>

@@ -4,13 +4,14 @@ import { IoMdClose } from "react-icons/io";
 import { FaHouse } from "react-icons/fa6";
 import { MdOutlineRealEstateAgent } from "react-icons/md";
 
-const Upbar = () => {
+const Upbar = ({onClickHandler}) => {
   return (
     <>
-        <div className='m-2'>
+        <div className={!onClickHandler? 'hidden': 'bg-white'}>
             <div className='flex justify-between'>
                 <img className='mx-2' src={logo} width={40} alt="Yem realty logo"/>
-                <span className='text-3xl m-2'><IoMdClose /></span>
+                <span className='text-3xl m-2' onClick={onClickHandler}><IoMdClose /></span>
+                {/* <button></button> */}
             </div>
             <div>
                 <div className='flex'>
