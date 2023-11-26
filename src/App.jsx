@@ -4,6 +4,7 @@ import { useState } from "react"
 import { FaBars } from "react-icons/fa";
 import logo from '../src/images/ylogo.png'
 import Landing from "./pages/Landing";
+import Upbar from "./components/Upbar";
 
 
 function App() {
@@ -23,8 +24,9 @@ function App() {
   return (
     <>
     <Navbar isSectionVisible={isSectionVisible}/>
+    <Upbar/>
     <div className="font-[Quicksand]" onClick={handleBodyClick}>
-    <ul className='md:hidden shadow block w-screen px-5 flex justify-between fixed top-0 z-[10000] '>
+    <ul className='md:hidden shadow block w-screen px-5 flex justify-between top-0 z-[10000] '>
           <li><img src={logo} width={40} className='h-[40px] my-2' alt="" /></li>
           <li className='text-black my-6'>
               <FaBars onClick={toggleIsOpen}/>
