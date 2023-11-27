@@ -1,10 +1,35 @@
 import React from 'react'
+import nupo from '../images/nupo.jpg'
+import iyin from '../images/iyin.jpg'
+import nup from '../images/nupo.jpg'
+import town from '../images/TownHall.jpg'
+import tixel from '../images/tixel.jpg'
+import uni from '../images/uni.jpg'
+import cocoa from '../images/cocoa.jpg'
+import bungalow from '../images/ti.jpg'
 
 const Landing = () => {
   return (
     <>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nam magnam, sequi similique accusantium atque natus laborum inventore sed harum quaerat libero numquam aperiam tenetur repudiandae, beatae porro deleniti! Officiis ullam accusantium eaque aspernatur pariatur doloribus possimus, officia nemo quia voluptas consequatur error hic dolorem odit. Assumenda reprehenderit et error voluptates provident expedita veniam odit recusandae quo facilis ducimus beatae ipsam, accusantium soluta enim architecto ad sequi dolorum quos? Quasi deleniti nostrum ut assumenda, iure expedita, qui quos impedit consectetur eveniet vel eos? Earum porro, cumque iste corrupti id debitis quisquam, voluptates totam nam molestiae vero minima ipsum nobis in possimus tempora expedita eveniet temporibus! Velit error consectetur voluptate optio ut at corrupti quidem commodi perferendis atque quo quos, dicta esse voluptatibus ipsam quis eos, doloribus temporibus vel asperiores natus reiciendis eligendi! Non, ullam excepturi, porro minima laudantium minus illo, accusantium odit fugit placeat reprehenderit? Quasi harum, maiores similique consequuntur animi veniam excepturi dolorum voluptates porro, laudantium enim hic voluptatem saepe libero? Similique pariatur obcaecati accusamus laboriosam nostrum debitis placeat unde doloribus autem minima perferendis dolorum eaque, odio nam cupiditate adipisci magnam libero at, quod doloremque, quia dolorem ipsum commodi. Blanditiis consequatur soluta sunt! Qui aliquam beatae adipisci dolore accusantium.
+        <div className='w-full my-20'>
+            <h1 className='text-center text-3xl md:text-4xl font-bold'>Discover the Most Profitable <br /> Properties in Ibadan</h1>
+            <p className='text-center my-5 justify '>Get exclusive access to premium and affordable real estate properties with secured <br /> lucrative investments. Don't miss out on the chance to make well-informed <br /> decisions and enjoy maximum returns.</p>
+            <div className='flex justify-center items-center gap-2'>
+              <a className='border p-2 rounded bg-black text-white' href="">Get Started</a>
+              <a className='border p-2 rounded bg-white' href="">Explore Properties</a>
+            </div>
+            <section>
+              <div>
+                <img src={cocoa} alt="" />
+                <img src={bungalow} alt="" />
+                <img src={uni} alt="" />
+                <img src={tixel} alt="" />
+                <img src={iyin} alt="" />
+                <img src={town} alt="" />
+                <img src={nupo} alt="" />
+                <img src={nup} alt="" />
+              </div>
+            </section>
         </div>
     </>
   )
