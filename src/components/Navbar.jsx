@@ -34,7 +34,10 @@ const Navbar = ({isSectionVisible }) => {
     <>
     <div className='hidden md:block bg-white'>
         <nav className='flex justify-between px-5 md:px-20 border w-full shadow'>
-            <img src={logo} width={40} className='h-[40px] my-4' alt="" />
+          <div className='flex my-4'>
+            <img src={logo} width={40} className='h-[40px]' alt="" />
+            {/* <span className='font-bold'>Yem <br />Realty</span> */}
+          </div>
             <div className=' block flex gap-8 my-6 '>
                 <div className='flex gap-2'>
                     <p>Explore</p>
