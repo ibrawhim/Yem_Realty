@@ -5,6 +5,7 @@ import { FaBars } from "react-icons/fa";
 import logo from '../src/images/ylogo.png'
 import Landing from "./pages/Landing";
 import Upbar from "./components/Upbar";
+import Map from "./pages/Map";
 
 
 function App() {
@@ -31,9 +32,9 @@ function App() {
   return (
     <>
     <Navbar isSectionVisible={isSectionVisible}/>
-    <div className={isOpen?'block fixed top-0 w-full': 'hidden'}><Upbar onClickHandler={handleClick} /></div>
+    <div className={isOpen?'block fixed w-full': 'hidden'}><Upbar onClickHandler={handleClick} /></div>
     <div className="font-[Quicksand]" onClick={handleBodyClick}>
-    <ul className={isOpen? 'hidden' : 'md:hidden shadow px-5 flex justify-between  z-[10000] '}>
+    <ul className='md:hidden shadow px-5 flex justify-between  z-[10000] '>
           <li><img src={logo} width={40} className='h-[40px] my-2' alt="" /></li>
           <li className='text-black my-6'>
               <FaBars onClick={toggleIsOpen}/>
@@ -42,6 +43,7 @@ function App() {
     {/* <div><Upbar/></div> */}
       <Routes>
         <Route path="/"  element={<Landing/>}/>
+        <Route path="/map" element={<Map/>}/>
       </Routes>
     </div>
     </>

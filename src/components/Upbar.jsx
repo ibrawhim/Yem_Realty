@@ -7,18 +7,18 @@ import { MdOutlineRealEstateAgent } from "react-icons/md";
 const Upbar = ({onClickHandler}) => {
   return (
     <>
-        <div className={!onClickHandler? 'hidden': 'bg-white'}>
+        <div className={!onClickHandler? 'hidden': 'bg-white p-5'}>
             <div className='flex justify-between'>
-                <img className='mx-2' src={logo} width={40} alt="Yem realty logo"/>
+                <img className='' src={logo} width={35} alt="Yem realty logo"/>
                 <span className='text-3xl m-2' onClick={onClickHandler}><IoMdClose /></span>
                 {/* <button></button> */}
             </div>
-            <div>
-                <div className='flex'>
-                <span className='mt-1 text-red-500'><FaHouse /></span><span>Properties</span>
+            <div className='mx-2 my-5'>
+                <div className='flex my-2'>
+                <span className='mt-1 text-red-500 me-4'><FaHouse /></span><span>Properties</span>
                 </div>
-                <div className='flex'>
-                <span className='mt-1 text-red-500'><MdOutlineRealEstateAgent /></span><span>Estates</span>
+                <div className='flex my-2'>
+                <span className='mt-1 text-red-500 me-4'><MdOutlineRealEstateAgent /></span><span>Estates</span>
                 </div>
             </div>
             <section>
