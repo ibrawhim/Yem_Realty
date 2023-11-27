@@ -15,18 +15,17 @@ function App() {
 
   const toggleIsOpen = () => {
     setIsOpen(true)
-    console.log(isOpen);
+    // console.log(isOpen);
   }
   const handleClick = () => {
-    // console.log('Button clicked!');
+    // console.log('Button clicked!')
     setIsOpen(false)
   };
 
   const handleBodyClick = () => {
      if (isSectionVisible==true){
       setSectionVisibility(!isSectionVisible)
-     }
-     
+    }
   };
 
   return (
