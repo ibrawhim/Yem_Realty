@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Map = () => {
+  const key = 'AIzaSyBQR_YLKvALu0BTJDu7A6bEy7OyPLgffvA'
   return (
     <>
         <div>

@@ -12,22 +12,25 @@ const Navbar = ({isSectionVisible }) => {
 
   const [chevronOne, setchevronOne] = useState(false)
   const [chevronTwo, setchevronTwo] = useState(false)
-  
+  console.log(chevronOne);
  
   const downOne = () => {
-    setchevronOne(true)
-    setchevronTwo(false)
-  }
-  const upOne = () => {
-    setchevronOne(false)
+    if(chevronOne==false){
+      setchevronTwo(false)
+      setchevronOne(true)
+    }else {
+      setchevronOne(false)
+    }
   }
   const downTwo = () => {
-    setchevronTwo(true)
-    setchevronOne(false)
+    if(chevronTwo==false){
+      setchevronTwo(true)
+      setchevronOne(false)
+    }else {
+      setchevronTwo(false)
+    }
   }
-  const upTwo = () => {
-    setchevronTwo(false)
-  }
+  
 
   
   return (
@@ -42,8 +45,8 @@ const Navbar = ({isSectionVisible }) => {
                 <div className='flex gap-2'>
                     <p>Explore</p>
                     <p className='mt-[3px]'>
-                      <button onClick={downOne} className={chevronOne==true? 'hidden': ''}  id='upOne'><IoChevronDownOutline /></button>
-                      <button  onClick={upOne} className={chevronOne==false? 'hidden':  '' }><IoChevronUp /></button>
+                      <button onClick={downOne}  id='upOne'>{!chevronOne? <IoChevronDownOutline /> : <IoChevronUp />}</button>
+                      {/* <button  onClick={upOne} className={chevronOne==false? 'hidden':  '' }><IoChevronUp /></button> */}
                     </p>
                 </div>
                 <div>About</div>
@@ -52,8 +55,9 @@ const Navbar = ({isSectionVisible }) => {
                 <div className='flex gap-2'>
                     <p>More</p>
                     <p className='mt-[3px]'>
-                      <button onClick={downTwo} className={chevronTwo==true? 'hidden': ''}  id='upOne'><IoChevronDownOutline /></button>
-                      <button  onClick={upTwo} className={chevronTwo==false?'hidden': ''}><IoChevronUp /></button>
+                    <button onClick={downTwo}  id='upOne'>{!chevronTwo? <IoChevronDownOutline /> : <IoChevronUp />}</button>
+                      {/* <button onClick={downTwo} className={chevronTwo==true? 'hidden': ''}  id='upOne'><IoChevronDownOutline /></button>
+                      <button  onClick={upTwo} className={chevronTwo==false?'hidden': ''}><IoChevronUp /></button> */}
                     </p>
                 </div>
             </div>
