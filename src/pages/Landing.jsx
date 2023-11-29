@@ -51,7 +51,7 @@ const Landing = () => {
               <a className='border p-2 rounded bg-black text-white ' href="">Get Started</a>
               <a className='border p-2 rounded bg-white' href="">Explore Properties</a>
             </div>
-            <section className='my-10 mx-2'>
+            <section className='my-10 md:mx-5 mx-2'>
               <h1 className='text-center mx-5 font-bold text-xl mt-20 mb-5'>Several Places in Ibadan City, Oyo State</h1>
               <div className='grid grid-cols-4 gap-2'>
                 <div className=''>
@@ -85,8 +85,8 @@ const Landing = () => {
               <div className='grid md:grid-cols-4 sm:grid-cols-1 gap-5 mx-5'>
               {
                 estates.map((item, index)=>(
-                  <div key={index} className='border relative  shadow-xl' style={myStyle}>
-                    <img src={item.img} className='w-[100%] opacity-70 block h-full' alt="" />
+                  <div key={index} className='border border-black rounded relative  shadow-xl' style={myStyle}>
+                    <img src={item.img} className='w-[100%] hover:scale-105  opacity-70 block h-full' alt="" />
                     <div className='text-center absolute top-[50%] left-[50%]' style={{transform: 'translate(-50%, -50%)'}}>
                     <div className='font-bold text-2xl text-white'>{item.name}</div>
                     <div className='flex font-bold gap-1 text-white'><span className='mt-1'><IoLocationOutline /></span><span>{item.location}</span></div>
