@@ -6,6 +6,7 @@ import logo from '../src/images/ylogo.png'
 import Landing from "./pages/Landing";
 import Upbar from "./components/Upbar";
 import Map from "./pages/Map";
+import Carousel from "./pages/Carousel";
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
       <Routes>
         <Route path="/"  element={<Landing/>}/>
         <Route path="/map" element={<Map/>}/>
+        <Route path="/card"  element={<Carousel/>}/>
       </Routes>
     </div>
     </>
