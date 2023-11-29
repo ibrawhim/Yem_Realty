@@ -39,7 +39,7 @@ const Carousel = () => {
             <div className='flex top-4 justify-center py-2 absolute'>
                 {
                     slides.map((item, index)=>(
-                        <div key={index} onClick={( )=> goToSlide(index)} className='text-2xl cursor pointer'><RxDotFilled/></div>
+                        <div key={index} onClick={()=> goToSlide(index)} className='text-2xl cursor pointer'><RxDotFilled/></div>
                     ))
                 }
             </div>
