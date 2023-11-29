@@ -10,7 +10,7 @@ import Map from "./pages/Map";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
-  const [isSectionVisible, setSectionVisibility] = useState(true);
+  const [isSectionVisible, setSectionVisibility] = useState(false);
   
 
   const toggleIsOpen = () => {
@@ -23,9 +23,11 @@ function App() {
   };
 
   const handleBodyClick = () => {
-     if (isSectionVisible==true){
-      setSectionVisibility(!isSectionVisible)
-    }
+    setSectionVisibility(!isSectionVisible)
+    //  if (!isSectionVisible){
+    //   setSectionVisibility(isSectionVisible == true)
+    // }
+    
   };
 
   return (

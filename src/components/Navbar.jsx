@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '../images/ylogo.png'
 import { FaHouse } from "react-icons/fa6";
 import { MdOutlineRealEstateAgent } from "react-icons/md";
@@ -8,11 +8,18 @@ import { TbHelpHexagon } from "react-icons/tb";
 import { VscGitPullRequestNewChanges } from "react-icons/vsc";
 
 const Navbar = ({isSectionVisible }) => {
-  // console.log(isSectionVisible);
+  console.log(isSectionVisible)
+
 
   const [chevronOne, setchevronOne] = useState(false)
   const [chevronTwo, setchevronTwo] = useState(false)
-  console.log(chevronOne);
+  
+  // useEffect(() => {
+  //   // Reset chevronOne and chevronTwo when isSectionVisible changes
+  //   setchevronOne(false);
+  //   setchevronTwo(false);
+  // }, [isSectionVisible]);
+
  
   const downOne = () => {
     if(chevronOne==false){
@@ -63,7 +70,7 @@ const Navbar = ({isSectionVisible }) => {
             </div>
             <a className= 'hidden md:block bg-red-500 px-2 my-6 h-[25px] rounded font-semibold' href="">Join Us</a>
             {/* <div className='md:hidden my-7'><FaBars /></div> */}
-        <section  className={chevronOne==false ? 'hidden' :   'absolute  top-[50px]'} id='firstSection'>
+        <section  className={chevronOne==false ? 'hidden' :  'absolute  top-[50px]'} id='firstSection'>
           <div className='border w-[400px] flex p-5 ms-40 me-20 gap-20 justify-center items-center bg-white rounded z-[2] relative'>
             <div>
               <div className='flex gap-2'>
@@ -79,7 +86,7 @@ const Navbar = ({isSectionVisible }) => {
             </div>
           </div>
         </section>
-        <section className={chevronTwo==false? 'hidden' :  'absolute w-[200px] top-[50px] left-[530px]  border p-5 bg-white rounded'} id='secondSection'>
+        <section className={chevronTwo==false? 'hidden' : 'absolute w-[200px] top-[50px] left-[530px]  border p-5 bg-white rounded'} id='secondSection'>
           <div className='flex  flex-col'>
           <div className='flex gap-3 mb-5 hover:bg-gray-100 p-1 rounded'>
             <p className='text-red-500 mt-1'><TbHelpHexagon /></p>

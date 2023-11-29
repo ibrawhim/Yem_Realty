@@ -7,8 +7,41 @@ import tixel from '../images/tixel.jpg'
 import uni from '../images/uni.jpg'
 import cocoa from '../images/cocoa.jpg'
 import bungalow from '../images/ti.jpg'
+import { IoLocationOutline } from "react-icons/io5";
+import kolapo from '../images/kolapo.jpg'
+import jericho from '../images/jericho.jpg'
+import legacy from '../images/legacy4.webp'
+import aero from '../images/Aerodrome.jpg'
 
 const Landing = () => {
+
+  let myStyle = {
+    background: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))'
+  }
+
+  const estates = [
+    {
+      name: 'Kolapo Ishola',
+      location: 'Akobo/Ibadan',
+      img: kolapo
+    },
+    {
+      name: 'Jericho',
+      location: 'Jericho/Ibadan',
+      img: jericho
+    },
+    {
+      name: 'Aerodrome',
+      location: 'Samonda/Ibadan',
+      img: aero
+    },
+    {
+      name: 'Legacy',
+      location: 'Akobo/Ibadan',
+      img: legacy
+    },
+  ]
+
   return (
     <>
         <div className='w-full my-20'>
@@ -19,6 +52,7 @@ const Landing = () => {
               <a className='border p-2 rounded bg-white' href="">Explore Properties</a>
             </div>
             <section className='my-10 mx-2'>
+              <h1 className='text-center mx-5 font-bold text-xl mt-20 mb-5'>Several Places in Ibadan City, Oyo State</h1>
               <div className='grid grid-cols-4 gap-2'>
                 <div className=''>
                   <img src={cocoa} className='w-full h-full' alt="" />
@@ -46,9 +80,25 @@ const Landing = () => {
                 </div>
               </div>
             </section>
+            <section>
+              <h1 className='text-center text-2xl font-bold my-6'>Featured Estates</h1>
+              <div className='grid md:grid-cols-4 sm:grid-cols-1 gap-5 mx-5'>
+              {
+                estates.map((item, index)=>(
+                  <div key={index} className='border relative  shadow-xl' style={myStyle}>
+                    <img src={item.img} className='w-[100%] opacity-70 block h-full' alt="" />
+                    <div className='text-center absolute top-[50%] left-[50%]' style={{transform: 'translate(-50%, -50%)'}}>
+                    <div className='font-bold text-2xl text-white'>{item.name}</div>
+                    <div className='flex font-bold gap-1 text-white'><span className='mt-1'><IoLocationOutline /></span><span>{item.location}</span></div>
+                    </div>
+                  </div>
+                ))
+              }
+              </div>
+            </section>
         </div>
     </>
   )
 }
 
-export default Landing
+export default Landing 
