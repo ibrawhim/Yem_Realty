@@ -7,6 +7,7 @@ import four from '../images/1/four.png'
 import five from '../images/1/five.png'
 import {BsChevronCompactLeft} from 'react-icons/bs'
 import {BsChevronCompactRight} from 'react-icons/bs'
+import {RxDotFilled} from 'react-icons/rx'
 
 const Carousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -20,13 +21,28 @@ const Carousel = () => {
         const newIndex = firstSlide ? slides.length - 1 : currentIndex - 1
         setCurrentIndex(newIndex)
     }
+    const nextSlide = () => {
+        const lastSlide = currentIndex=== slides.length - 1;
+        const newIndex = lastSlide ? 0  : currentIndex + 1
+        setCurrentIndex(newIndex)
+    }
+    const goToSlide = (index) => {
+        setCurrentIndex(index)
+    }
 
   return (
     <>
         <div className='flex max-w-[200px] h-[170px] w-full m-auto relative border'>
             <div style={{backgroundImage: `url(${slides[currentIndex]})`}} className='w-full h-full bg-center bg-cover duration-500'></div>
             <div onClick={prevSlide} className='absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5  p-1 cursor-pointer rounded-full bg-black text-white text-2xl'><BsChevronCompactLeft/></div>
-            <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 p-1 cursor-pointer  rounded-full bg-black text-white text-2xl'><BsChevronCompactRight/></div>
+            <div onClick={nextSlide} className='absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 p-1 cursor-pointer  rounded-full bg-black text-white text-2xl'><BsChevronCompactRight/></div>
+            <div className='flex top-4 justify-center py-2 absolute'>
+                {
+                    slides.map((item, index)=>(
+                        <div key={index} onClick={( )=> goToSlide(index)} className='text-2xl cursor pointer'><RxDotFilled/></div>
+                    ))
+                }
+            </div>
         </div>
     </>
   )
