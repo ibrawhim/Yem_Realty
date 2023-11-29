@@ -42,7 +42,7 @@ const Navbar = ({isSectionVisible }) => {
   
   return (
     <>
-    <div className='hidden md:block bg-white'>
+    <div className='hidden sticky top-0 md:block bg-white'>
         <nav className='flex justify-between px-5 md:px-20 border w-full shadow'>
           <div className='flex my-4'>
             <img src={logo} width={40} className='h-[40px]' alt="" />
@@ -70,7 +70,7 @@ const Navbar = ({isSectionVisible }) => {
             </div>
             <a className= 'hidden md:block bg-red-500 px-2 my-6 h-[25px] rounded font-semibold' href="">Join Us</a>
             {/* <div className='md:hidden my-7'><FaBars /></div> */}
-        <section  className={chevronOne==false ? 'hidden' :  'absolute  top-[50px]'} id='firstSection'>
+        <section  className={chevronOne==false ? 'hidden' :  'absolute   top-[50px]'} id='firstSection'>
           <div className='border w-[400px] flex p-5 ms-40 me-20 gap-20 justify-center items-center bg-white rounded z-[2] relative'>
             <div>
               <div className='flex gap-2'>
