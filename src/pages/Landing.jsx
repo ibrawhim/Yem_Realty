@@ -12,6 +12,8 @@ import kolapo from '../images/kolapo.jpg'
 import jericho from '../images/jericho.jpg'
 import legacy from '../images/legacy4.webp'
 import aero from '../images/Aerodrome.jpg'
+import Carousel from './Carousel'
+import Carousell from './Carousell'
 
 const Landing = () => {
 
@@ -95,6 +97,11 @@ const Landing = () => {
                 ))
               }
               </div>
+            </section>
+            <section className='my-10'>
+              <h1 className='text-center font-bold text-2xl'>Explore Trending Places</h1>
+              {/* <Carousel/> */}
+              <Carousell/>
             </section>
         </div>
     </>

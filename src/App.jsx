@@ -46,7 +46,7 @@ function App() {
       <Routes>
         <Route path="/"  element={<Landing/>}/>
         <Route path="/map" element={<Map/>}/>
-        <Route path="/card"  element={<Carousel/>}/>
+        {/* <Route path="/card"  element={<Carousel/>}/> */}
       </Routes>
     </div>
     </>
