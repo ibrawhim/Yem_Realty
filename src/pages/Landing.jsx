@@ -103,18 +103,18 @@ const Landing = () => {
             <section className='my-10'>
               <h1 className='text-center font-bold text-2xl my-5'>Explore Trending Places</h1>
               <Carousell/>
-              <a href="" className='text-center bg-black my-5 text-white flex justify-center'>View more</a>
+              <button className='flex justify-center text-white p-2 rounded  my-10 mx-auto bg-black'>View More</button>
             </section>
-            <section className='mx-5 relative border'>
-              <div className='grid md:grid-cols-2 sm:grid-cols-1 '>
-                <div>
-                  <p>Want to buy a property?</p>
-                  <p>Buy a dream home for your family</p>
-                  <p>The all-in-one commerce platform to buy, rent, and sell a property.</p>
-                  <a href="">Get Started</a>
+            <section className='mx-5 relative'>
+              <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-5 '>
+                <div className='md:mx-10 '>
+                  <p className='font-semibold'>Want to buy a property?</p>
+                  <p className='text-2xl font-bold mt-4'>Buy a dream home for your family</p>
+                  <p className='my-5'>The all-in-one commerce platform to buy, rent, and sell a property.</p>
+                  <a className='bg-black text-white p-2 rounded' href="">Get Started</a>
                 </div>
                 <div>
-                  <img src={newImage} alt="" />
+                  <img src={newImage} className='rounded' width={400} alt="" />
                 </div>
               </div>
               <img src={adult} width={80} className='rounded-full h-[80px] absolute top-[30%] left-[46%] border border-4 border-red-500 hidden md:block' alt="" />

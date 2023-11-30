@@ -22,7 +22,7 @@ const Carousell = () => {
     <>
       <div className='grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 gap-5 mx-5'>
         {carouselList.map((item, index) => (
-          <div key={index} className='md:hover:shadow shadow rounded relative h-[300px]'>
+          <div key={index} className='md:hover:shadow shadow rounded relative group h-[300px]'>
             <img src={item.images[currentIndex]} className='w-full h-2/3' alt='' />
             <div className='bg-red-500 w-1/2 md:w-2/3 my-2 rounded px-2 text-white font-bold'>
               {item.type}
@@ -36,12 +36,12 @@ const Carousell = () => {
             </div>
             <button
               onClick={() => prevSlide(index, item.images)}
-              className='absolute top-[35%] bg-white rounded-full text-black p-1 -translate-x-0 left-2 translate-y-[-50%]'>
+              className='absolute hidden group-hover:block top-[35%] bg-white rounded-full text-black p-1 -translate-x-0 left-2 translate-y-[-50%]'>
               <MdOutlineChevronLeft />
             </button>
             <button
               onClick={() => nextSlide(index, item.images)}
-              className='absolute top-[35%] bg-white rounded-full text-black p-1 -translate-x-0 right-2 translate-y-[-50%]'>
+              className='absolute hidden group-hover:block top-[35%] bg-white rounded-full text-black p-1 -translate-x-0 right-2 translate-y-[-50%]'>
               <MdChevronRight />
             </button>
           </div>
