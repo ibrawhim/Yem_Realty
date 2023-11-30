@@ -14,6 +14,8 @@ import legacy from '../images/legacy4.webp'
 import aero from '../images/Aerodrome.jpg'
 import Carousel from './Carousel'
 import Carousell from './Carousell'
+import newImage from '../images/work.webp'
+import adult from '../images/adult.webp'
 
 const Landing = () => {
 
@@ -99,8 +101,23 @@ const Landing = () => {
               </div>
             </section>
             <section className='my-10'>
-              <h1 className='text-center font-bold text-2xl'>Explore Trending Places</h1>
+              <h1 className='text-center font-bold text-2xl my-5'>Explore Trending Places</h1>
               <Carousell/>
+              <a href="" className='text-center bg-black my-5 text-white flex justify-center'>View more</a>
+            </section>
+            <section className='mx-5 relative border'>
+              <div className='grid md:grid-cols-2 sm:grid-cols-1 '>
+                <div>
+                  <p>Want to buy a property?</p>
+                  <p>Buy a dream home for your family</p>
+                  <p>The all-in-one commerce platform to buy, rent, and sell a property.</p>
+                  <a href="">Get Started</a>
+                </div>
+                <div>
+                  <img src={newImage} alt="" />
+                </div>
+              </div>
+              <img src={adult} width={80} className='rounded-full h-[80px] absolute top-[30%] left-[46%] border border-4 border-red-500 hidden md:block' alt="" />
             </section>
         </div>
     </>
