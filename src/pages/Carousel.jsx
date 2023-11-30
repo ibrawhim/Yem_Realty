@@ -36,10 +36,10 @@ const Carousel = () => {
             <div style={{backgroundImage: `url(${slides[currentIndex]})`}} className='w-full h-full bg-center bg-cover duration-500'></div>
             <div onClick={prevSlide} className='absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5  p-1 cursor-pointer rounded-full bg-black text-white text-2xl'><BsChevronCompactLeft/></div>
             <div onClick={nextSlide} className='absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 p-1 cursor-pointer  rounded-full bg-black text-white text-2xl'><BsChevronCompactRight/></div>
-            <div className='flex top-4 justify-center py-2 absolute'>
+            <div className='flex  justify-center py-2 absolute top-[140px] left-[50px]'>
                 {
                     slides.map((item, index)=>(
-                        <div key={index} onClick={()=> goToSlide(index)} className='text-2xl cursor pointer'><RxDotFilled/></div>
+                        <div key={index} onClick={()=> goToSlide(index)} className={currentIndex==index ? 'text-white text-2xl' :'text-2xl cursor-pointer'}><RxDotFilled/></div>
                     ))
                 }
             </div>
