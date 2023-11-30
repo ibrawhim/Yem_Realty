@@ -8,7 +8,7 @@ import { TbHelpHexagon } from "react-icons/tb";
 import { VscGitPullRequestNewChanges } from "react-icons/vsc";
 
 const Navbar = ({isSectionVisible }) => {
-  console.log(isSectionVisible)
+  // console.log(isSectionVisible)
 
 
   const [chevronOne, setchevronOne] = useState(false)
