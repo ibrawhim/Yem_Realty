@@ -100,7 +100,6 @@ const Landing = () => {
             </section>
             <section className='my-10'>
               <h1 className='text-center font-bold text-2xl'>Explore Trending Places</h1>
-              {/* <Carousel/> */}
               <Carousell/>
             </section>
         </div>
