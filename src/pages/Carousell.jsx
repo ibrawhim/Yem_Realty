@@ -56,7 +56,7 @@ const goToSlide = (carouselIndex, imageIndex) => {
             </button>
             <div className='flex absolute top-[60%] left-[25%]'>
             {item.images.map((image, i) => (
-               <span key={i} onClick={()=> goToSlide(i)} className={carouselIndexes[index]==i ? 'text-white text-xl' :'text-xl cursor-pointer'}><LuDot /></span>
+               <span key={i} onClick={()=> goToSlide(index, i)} className={carouselIndexes[index]===i ? 'text-white text-xl' :'text-xl cursor-pointer'}><LuDot /></span>
             ))}
           </div>
           </div>
