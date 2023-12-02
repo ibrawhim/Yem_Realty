@@ -71,14 +71,14 @@ const Navbar = ({isSectionVisible }) => {
             <a className= 'hidden md:block bg-red-500 px-2  my-6 h-[25px] rounded font-semibold' href="">Join Us</a>
             {/* <div className='md:hidden my-7'><FaBars /></div> */}
         <section  className={chevronOne==false ? 'hidden' :  'absolute   top-[50px]'} id='firstSection'>
-          <div className='border w-[400px] flex p-5 ms-40 me-20 gap-20 justify-center items-center bg-white rounded z-[2] relative'>
-            <div>
+          <div className='border w-[500px] flex p-5 ms-40 me-20 gap-20 justify-center items-center bg-white rounded z-[2] relative'>
+            <div className='hover:bg-gray-100 rounded'>
               <div className='flex gap-2'>
               <span className='mt-1 text-red-500'><FaHouse /></span><span>Properties</span>
               </div>
-              <p className='ms-6'>See the list of available properties in Yem Realty</p>
+              <p className='ms-6 '>See the list of available properties in Yem Realty</p>
             </div>
-            <div>
+            <div className='hover:bg-gray-100 rounded'>
               <div className='flex gap-2'>
               <span className='mt-1 text-red-500'><MdOutlineRealEstateAgent /></span><span>Estates</span>
               </div>

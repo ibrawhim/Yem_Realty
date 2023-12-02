@@ -22,6 +22,8 @@ import { FaBox } from "react-icons/fa6";
 import { GoGift } from "react-icons/go";
 import { FaChartLine } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
+import sale1 from '../images/sale2.jpg'
+import sale2 from '../images/sale1.webp'
 
 
 const Landing = () => {
@@ -161,6 +163,20 @@ const Landing = () => {
                   <p>Discover what properties at Win Realty look like every Saturday both online and offline.</p>
                 </div>
               </div>
+            </section>
+            <section className='lg:mx-5 mx-20 mt-40 relative'>
+              <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-5 '>
+                <div className='md:mx-10 '>
+                  <p className='font-semibold'>Want to sell a property?</p>
+                  <p className='text-2xl font-bold mt-4'>We believe everyone can sell a property</p>
+                  <p className='my-5'>In Yem Realty, customers can also be realtors. Refer people and earn huge bonuses through our referral program.</p>
+                  <a className='bg-black text-white p-2 rounded' href="">Get Started</a>
+                </div>
+                <div>
+                  <img src={sale1} className='rounded' width={400} alt="" />
+                </div>
+              </div>
+              <img src={sale2} width={80} className='rounded-full h-[80px] absolute top-[-10%] left-[49%] border border-4 border-red-500 hidden md:block' alt="" />
             </section>
         </div>
     </>
