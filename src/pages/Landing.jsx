@@ -24,6 +24,14 @@ import { FaChartLine } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import sale1 from '../images/sale2.jpg'
 import sale2 from '../images/sale1.webp'
+import pal1 from '../images/pal1.png'
+import pal2 from '../images/pal2.png'
+import pal3 from '../images/pal3.png'
+import pal4 from '../images/pal4.png'
+import pal5 from '../images/pal5.png'
+import pal6 from '../images/pal6.png'
+import pal7 from '../images/pal7.png'
+import pal8 from '../images/pal8.png'
 
 
 const Landing = () => {
@@ -177,6 +185,20 @@ const Landing = () => {
                 </div>
               </div>
               <img src={sale2} width={80} className='rounded-full h-[80px] absolute top-[-10%] left-[49%] border border-4 border-red-500 hidden md:block' alt="" />
+            </section>
+            <section className='mx-10 my-20'>
+              <h1 className='text-2xl text-center mt-5 font-bold'>Estates & Partners</h1>
+              <p className='text-center mb-12'>Over the years, certain companies have trusted our way of doing business</p>
+              <div className='grid lg:grid-cols-4 gap-5 md:grid-cols-4 grid-cols-2'>
+                <div className='flex justify-center p-2 rounded' style={{backgroundColor: '#fafafa'}}><img src={pal1} width={50} alt="" /></div>
+                <div className='flex justify-center p-2 rounded' style={{backgroundColor: '#fafafa'}}><img src={pal2} width={50} alt="" /></div>
+                <div className='flex justify-center p-2 rounded' style={{backgroundColor: '#fafafa'}}><img src={pal3} width={50} alt="" /></div>
+                <div className='flex justify-center p-2 rounded' style={{backgroundColor: '#fafafa'}}><img src={pal4} width={50} alt="" /></div>
+                <div className='flex justify-center p-2 rounded' style={{backgroundColor: '#fafafa'}}><img src={pal5} width={50} alt="" /></div>
+                <div className='flex justify-center p-2 rounded' style={{backgroundColor: '#fafafa'}}><img src={pal6} width={50} alt="" /></div>
+                <div className='flex justify-center p-2 rounded' style={{backgroundColor: '#fafafa'}}><img src={pal7} width={50} alt="" /></div>
+                <div className='flex justify-center p-2 rounded' style={{backgroundColor: '#fafafa'}}><img src={pal8} width={50} alt="" /></div>
+              </div>
             </section>
         </div>
     </>

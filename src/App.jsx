@@ -35,7 +35,7 @@ function App() {
     <>
     <Navbar isSectionVisible={isSectionVisible}/>
     <div className={isOpen?'block fixed w-full': 'hidden'}><Upbar onClickHandler={handleClick} /></div>
-    <div className="font-[Quicksand]" onClick={handleBodyClick}>
+    <div className="font-[Quicksand] lg:mx-10 sm:mx-0" onClick={handleBodyClick}>
     <ul className='md:hidden shadow px-5 flex justify-between  z-[10000] '>
           <li><img src={logo} width={40} className='h-[40px] my-2' alt="" /></li>
           <li className='text-black my-6'>
