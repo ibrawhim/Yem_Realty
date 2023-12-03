@@ -3,6 +3,9 @@ import nupo from '../images/nupo.jpg'
 import iyin from '../images/iyin.jpg'
 import nup from '../images/temi.jpg'
 import town from '../images/TownHall.jpg'
+import new1 from '../images/new1.jpg'
+import new2 from '../images/new2.jpg'
+import new3 from '../images/new3.jpg'
 import tixel from '../images/tixel.jpg'
 import uni from '../images/uni.jpg'
 import cocoa from '../images/cocoa.jpg'
@@ -198,6 +201,27 @@ const Landing = () => {
                 <div className='flex justify-center p-2 rounded' style={{backgroundColor: '#fafafa'}}><img src={pal6} width={50} alt="" /></div>
                 <div className='flex justify-center p-2 rounded' style={{backgroundColor: '#fafafa'}}><img src={pal7} width={50} alt="" /></div>
                 <div className='flex justify-center p-2 rounded' style={{backgroundColor: '#fafafa'}}><img src={pal8} width={50} alt="" /></div>
+              </div>
+            </section>
+            <section className='mx-10'>
+              <h1 className='font-bold text-center text-2xl'>Featured Posts</h1>
+              <p className='text-center'>Read our latest properties and real estate related stories.</p>
+              <div className='grid  lg:gid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-10'>
+                <div className='h-[100px] border border-2 border-red-500'>
+                  <img src={new1} alt="" />
+                  <p>The Ultimate Guide to Buying Real Estate</p>
+                  <p> Defining your Objective  In today's ever-changing market, purchasing real estate remains a solid in...</p>
+                </div>
+                <div className='h-[100px] border border-2 border-red-500'>
+                  <img src={new2} alt="" />
+                  <p>4 Sure Ways To Invest In Real Estate Even if You Don't Have Millions</p>
+                  <p> The idea of only the rich owning lands and properties is false. You too can own lands and properties...</p>
+                </div>
+                <div className='h-[100px] border border-2 border-red-500'>
+                  <img src={new3} alt="" />
+                  <p>Industrial real estate offers hope with 12% annual yield</p>
+                  <p> Defining your Objective  In today's ever-changing market, purchasing real estate remains a solid in</p>
+                </div>
               </div>
             </section>
         </div>
