@@ -11,6 +11,7 @@ import uni from '../images/uni.jpg'
 import cocoa from '../images/cocoa.jpg'
 import bungalow from '../images/ti.jpg'
 import { IoLocationOutline } from "react-icons/io5";
+import { CiCalendarDate } from "react-icons/ci";
 import kolapo from '../images/kolapo.jpg'
 import jericho from '../images/jericho.jpg'
 import legacy from '../images/legacy4.webp'
@@ -35,6 +36,7 @@ import pal5 from '../images/pal5.png'
 import pal6 from '../images/pal6.png'
 import pal7 from '../images/pal7.png'
 import pal8 from '../images/pal8.png'
+import kay from '../images/kay.png'
 
 
 const Landing = () => {
@@ -205,23 +207,36 @@ const Landing = () => {
             </section>
             <section className='mx-10'>
               <h1 className='font-bold text-center text-2xl'>Featured Posts</h1>
-              <p className='text-center'>Read our latest properties and real estate related stories.</p>
+              <p className='text-center mt-2 mb-10'>Read our latest properties and real estate related stories.</p>
               <div className='grid  lg:gid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-10'>
-                <div className='h-[100px] border border-2 border-red-500'>
-                  <img src={new1} alt="" />
-                  <p>The Ultimate Guide to Buying Real Estate</p>
+                <a href='' className='h-[300px]'>
+                  <img src={new1} className='h-[50%] w-full rounded' alt="" />
+                  <div className='flex'><span className='mt-1 me-1'><CiCalendarDate /></span><p>Sep 10, 2023.</p></div>
+                  <p className='font-bold my-2'>The Ultimate Guide to Buying Real Estate</p>
                   <p> Defining your Objective  In today's ever-changing market, purchasing real estate remains a solid in...</p>
-                </div>
-                <div className='h-[100px] border border-2 border-red-500'>
-                  <img src={new2} alt="" />
-                  <p>4 Sure Ways To Invest In Real Estate Even if You Don't Have Millions</p>
+                </a>
+                <a href='' className='h-[300px]'>
+                  <img src={new2} className='h-[50%] w-full rounded' alt="" />
+                  <div className='flex'><span className='mt-1 me-1'><CiCalendarDate /></span><p>Sep 10, 2023.</p></div>
+                  <p className='font-bold my-2'>4 Sure Ways To Invest In Real Estate Even if You Don't Have Millions</p>
                   <p> The idea of only the rich owning lands and properties is false. You too can own lands and properties...</p>
-                </div>
-                <div className='h-[100px] border border-2 border-red-500'>
-                  <img src={new3} alt="" />
-                  <p>Industrial real estate offers hope with 12% annual yield</p>
+                </a>
+                <a href='' className='h-[300px]'>
+                  <img src={new3} className='h-[50%] w-full rounded' alt="" />
+                  <div className='flex'><span className='mt-1 me-1'><CiCalendarDate /></span><p>Sep 10, 2023.</p></div>
+                  <p className='font-bold my-2'>Industrial real estate offers hope with 12% annual yield</p>
                   <p> Defining your Objective  In today's ever-changing market, purchasing real estate remains a solid in</p>
-                </div>
+                </a>
+              </div>
+            </section>
+            <section className='lg:mx-10 mx-5 my-20 flex justify-between  px-14 py-10 lg:py-0 md:py-10' style={{backgroundColor:'#f4f4f5'}}>
+              <div className=' flex flex-col justify-center mx-auto'>
+                <p className='text-2xl font-bold text-center lg:text-left lg:mx-0'>Become a Real Estate Agent</p>
+                <p className='my-3 w-full lg:w-[300px] text-center lg:text-left'>Join hundreds of our Win Associates making millons monthly selling our properties.</p>
+                <a href="" className='bg-red-500  lg:w-[120px] md:w-[120px] w-[120px] ps-4 p-2 rounded text-white mx-auto lg:mx-0'>Register Now</a>
+              </div>
+              <div className='lg:block hidden'>
+                <img src={kay} width={350} alt="" />
               </div>
             </section>
         </div>
