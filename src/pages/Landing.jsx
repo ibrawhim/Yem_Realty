@@ -74,7 +74,7 @@ const Landing = () => {
             <h1 className='text-center text-3xl md:text-4xl font-bold'>Discover the Most Profitable <br /> Properties in Ibadan</h1>
             <p className='text-center my-5 justify '>Get exclusive access to premium and affordable real estate properties with secured <br /> lucrative investments. Don't miss out on the chance to make well-informed <br /> decisions and enjoy maximum returns.</p>
             <div className='flex md:flex-row md:flex-row flex-col justify-center items-center gap-2'>
-              <a className='border p-2 rounded bg-black text-white ' href="">Get Started</a>
+              <a className='border p-2 rounded bg-black text-white text-center w-[130px]' href="">Get Started</a>
               <a className='border p-2 rounded bg-white' href="">Explore Properties</a>
             </div>
             <section className='my-10 md:mx-5 mx-2'>
