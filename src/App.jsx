@@ -7,6 +7,7 @@ import Landing from "./pages/Landing";
 import Upbar from "./components/Upbar";
 import Map from "./pages/Map";
 import Carousel from "./pages/Carousel";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
         {/* <Route path="/card"  element={<Carousel/>}/> */}
       </Routes>
     </div>
+    <Footer/>
     </>
   )
 }
