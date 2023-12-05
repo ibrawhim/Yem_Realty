@@ -7,8 +7,8 @@ import { useState } from 'react'
 const Footer = () => {
 
     const location = useLocation()
-    const [isOpen, setIsOpen] = useState(false);
-    const hiddenRoutes = ['/*']
+    // const [isOpen, setIsOpen] = useState(false);
+    const hiddenRoutes = ['*']
     const isHidden = hiddenRoutes.includes(location.pathname);
 
 

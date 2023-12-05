@@ -37,6 +37,7 @@ import pal6 from '../images/pal6.png'
 import pal7 from '../images/pal7.png'
 import pal8 from '../images/pal8.png'
 import kay from '../images/kay.png'
+import { Link } from 'react-router-dom'
 
 
 const Landing = () => {
@@ -45,7 +46,7 @@ const Landing = () => {
     background: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))'
   }
 
-  const estates = [
+ const estates = [
     {
       name: 'Kolapo Ishola',
       location: 'Akobo/Ibadan',
@@ -121,14 +122,17 @@ const Landing = () => {
                 ))
               }
               </div>
+              <div className='my-6 flex justify-center'>
+                <Link to="/estates" className='text-white bg-black p-2 rounded'>Explore Estates</Link>
+              </div>
             </section>
             <section className='my-10'>
               <h1 className='text-center font-bold text-2xl my-5'>Explore Trending Places</h1>
               <Carousell/>
               <button className='flex justify-center text-white p-2 rounded  my-10 mx-auto bg-black'>View More</button>
             </section>
-            <section className='lg:mx-5 mx-20 mt-40 relative'>
-              <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-5 '>
+            <section className='lg:mx-5 lg:mx-20 mx-10 mt-40 relative'>
+              <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-5'>
                 <div className='md:mx-10 '>
                   <p className='font-semibold'>Want to buy a property?</p>
                   <p className='text-2xl font-bold mt-4'>Buy a dream home for your family</p>
@@ -136,12 +140,12 @@ const Landing = () => {
                   <a className='bg-black text-white p-2 rounded' href="">Get Started</a>
                 </div>
                 <div>
-                  <img src={newImage} className='rounded' width={400} alt="" />
+                  <img src={newImage} className='rounded w-full' width={400} alt=""/>
                 </div>
               </div>
               <img src={adult} width={80} className='rounded-full h-[80px] absolute top-[-10%] left-[49%] border border-4 border-red-500 hidden md:block' alt="" />
             </section>
-            <section className='mx-20 my-20'>
+            <section className='lg:mx-20 mx-10 my-20'>
               <h1 className='my-2 font-bold text-2xl text-center'>Values we give to you</h1>
               <p className='my-2 mb-10 text-center'>We make real estate easy for you by providing the best services</p>
               <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10 '>
@@ -177,7 +181,7 @@ const Landing = () => {
                 </div>
               </div>
             </section>
-            <section className='lg:mx-5 mx-20 mt-40 relative'>
+            <section className='lg:mx-5 lg:mx-20 mx-10 mt-40 relative'>
               <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-5 '>
                 <div className='md:mx-10 '>
                   <p className='font-semibold'>Want to sell a property?</p>
@@ -186,7 +190,7 @@ const Landing = () => {
                   <a className='bg-black text-white p-2 rounded' href="">Get Started</a>
                 </div>
                 <div>
-                  <img src={sale1} className='rounded' width={400} alt="" />
+                  <img src={sale1} className='rounded w-full' width={400} alt="" />
                 </div>
               </div>
               <img src={sale2} width={80} className='rounded-full h-[80px] absolute top-[-10%] left-[49%] border border-4 border-red-500 hidden md:block' alt="" />
