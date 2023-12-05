@@ -8,6 +8,7 @@ import Upbar from "./components/Upbar";
 import Map from "./pages/Map";
 import Carousel from "./pages/Carousel";
 import Footer from "./components/Footer";
+import Error from "./pages/Error";
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
       <Routes>
         <Route path="/"  element={<Landing/>}/>
         <Route path="/map" element={<Map/>}/>
+        <Route path="*"  element={<Error/>}/>
         {/* <Route path="/card"  element={<Carousel/>}/> */}
       </Routes>
     </div>
