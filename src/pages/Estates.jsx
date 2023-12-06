@@ -50,7 +50,7 @@ const Estates = () => {
         <section>
               <h1 className='text-center text-2xl font-bold'>Explore Yem Realty Estates</h1>
               <p className='text-center mb-10'>Check out the latest estates available on Win Realty.</p>
-              <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-5 mx-5' style={{zIndex:'-1'}}>
+              <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-5 mx-5 relative' style={{zIndex:'-1'}}>
               {
                 estates.map((item, index)=>(
                   <Link to='' key={index} className='border h-[250px] border-black rounded relative  shadow-xl' style={myStyle}>
