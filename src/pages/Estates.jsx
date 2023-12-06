@@ -50,11 +50,11 @@ const Estates = () => {
         <section>
               <h1 className='text-center text-2xl font-bold'>Explore Yem Realty Estates</h1>
               <p className='text-center mb-10'>Check out the latest estates available on Win Realty.</p>
-              <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-5 mx-5'>
+              <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-5 mx-5' style={{zIndex:'-1'}}>
               {
                 estates.map((item, index)=>(
                   <Link to='' key={index} className='border h-[250px] border-black rounded relative  shadow-xl' style={myStyle}>
-                    <img src={item.img} className='w-[100%]  opacity-70 block h-full' alt="" />
+                    <img src={item.img} className='w-[100%]  opacity-70 h-full' alt=""/>
                     <div className='text-center absolute top-[50%] left-[50%]' style={{transform: 'translate(-50%, -50%)'}}>
                     <div className='font-bold text-2xl text-white'>{item.name}</div>
                     <div className='flex font-bold gap-1 text-white'><span className='mt-1'><IoLocationOutline /></span><span>{item.location}</span></div>

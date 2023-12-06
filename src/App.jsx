@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Navigate, Route, Routes } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import { useState } from "react"
 import { FaBars } from "react-icons/fa";
@@ -10,6 +10,7 @@ import Carousel from "./pages/Carousel";
 import Footer from "./components/Footer";
 import Error from "./pages/Error";
 import Estates from "./pages/Estates";
+
 
 
 function App() {
@@ -39,7 +40,7 @@ function App() {
     <Navbar isSectionVisible={isSectionVisible}/>
     <div className={isOpen?'block fixed w-full': 'hidden'}><Upbar onClickHandler={handleClick} /></div>
     <div className="font-[Quicksand] lg:mx-10 sm:mx-0" onClick={handleBodyClick}>
-    <ul className='md:hidden shadow px-5 flex justify-between  z-[10000] '>
+    <ul className='md:hidden shadow px-5 flex justify-between '>
           <li><img src={logo} width={40} className='h-[40px] my-2' alt="" /></li>
           <li className='text-black my-6'>
               <FaBars onClick={toggleIsOpen}/>
@@ -47,8 +48,9 @@ function App() {
       </ul>
     {/* <div><Upbar/></div> */}
       <Routes>
-        <Route path="/home"  element={<Landing/>}/>
+        <Route path="/"  element={<Landing/>}/>
         <Route path="/map" element={<Map/>}/>
+        <Route path='/home' element={<Navigate to='/'/>}/>
         <Route path="*"  element={<Error/>}/>
         <Route path='/estates' element={<Estates/>}/>
         {/* <Route path="/card"  element={<Carousel/>}/> */}

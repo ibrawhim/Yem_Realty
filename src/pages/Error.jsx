@@ -3,6 +3,7 @@ import erro from '../images/erro.png'
 import { FaHome } from "react-icons/fa";
 import {Link} from 'react-router-dom'
 
+
 const Error = () => {
 
   return (
@@ -11,7 +12,7 @@ const Error = () => {
             <img src={erro} className='img-fluid flex  mx-auto' width={400} alt="" />
             <div className='flex flex-col items-center justify-center'>
                 <p className='font-bold text-2xl mb-2'>Oops, Something Went Wrong</p>
-                <Link to="/home" className='flex bg-black text-white p-2 rounded'><span className='m-1'><FaHome /></span><span>Home Page</span></Link>
+                <Link to="/" className='flex bg-black text-white p-2 rounded'><span className='m-1'><FaHome /></span><span>Home Page</span></Link>
             </div>
         </div>
     </>
