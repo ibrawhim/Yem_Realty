@@ -10,6 +10,7 @@ import Carousel from "./pages/Carousel";
 import Footer from "./components/Footer";
 import Error from "./pages/Error";
 import Estates from "./pages/Estates";
+import JoinUs from "./pages/JoinUs";
 
 
 
@@ -53,6 +54,7 @@ function App() {
         <Route path='/home' element={<Navigate to='/'/>}/>
         <Route path="*"  element={<Error/>}/>
         <Route path='/estates' element={<Estates/>}/>
+        <Route path="/joinus"  element={<JoinUs/>}/>
         {/* <Route path="/card"  element={<Carousel/>}/> */}
       </Routes>
     </div>

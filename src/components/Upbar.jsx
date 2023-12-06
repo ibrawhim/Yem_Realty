@@ -3,9 +3,17 @@ import logo from '../images/ylogo.png'
 import { IoMdClose } from "react-icons/io";
 import { FaHouse } from "react-icons/fa6";
 import { MdOutlineRealEstateAgent } from "react-icons/md";
+import { useLocation } from 'react-router-dom'
+
 
 const Upbar = ({onClickHandler}) => {
-  return (
+
+    const location = useLocation()
+  const hiddenRoutes = ['/joinus']
+  const isHidden = hiddenRoutes.includes(location.pathname);
+
+
+  return isHidden ? null : (
     <>
         <div className={!onClickHandler? 'hidden': 'fixed w-screen md:hidden bg-white p-5 rounded absolute'} style={{zIndex: '2'}}>
             <div className='flex justify-between'>

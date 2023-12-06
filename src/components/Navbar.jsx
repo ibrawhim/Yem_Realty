@@ -6,10 +6,16 @@ import { IoChevronDownOutline } from "react-icons/io5";
 import { IoChevronUp } from "react-icons/io5";
 import { TbHelpHexagon } from "react-icons/tb";
 import { VscGitPullRequestNewChanges } from "react-icons/vsc";
+import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom'
+
 
 const Navbar = ({isSectionVisible }) => {
   // console.log(isSectionVisible)
-
+  const location = useLocation()
+  // const [isOpen, setIsOpen] = useState(false);
+  const hiddenRoutes = ['/joinus']
+  const isHidden = hiddenRoutes.includes(location.pathname);
 
   const [chevronOne, setchevronOne] = useState(false)
   const [chevronTwo, setchevronTwo] = useState(false)
@@ -40,14 +46,14 @@ const Navbar = ({isSectionVisible }) => {
   
 
   
-  return (
+  return isHidden ? null : (
     <>
     <div className='hidden sticky z-[1000000] top-0 md:block bg-white'>
         <nav className='flex justify-between px-5 md:px-20 border w-full shadow'>
-          <div className='flex my-4'>
+          <Link to='/' className='flex my-4'>
             <img src={logo} width={40} className='h-[40px]' alt="" />
             {/* <span className='font-bold'>Yem <br />Realty</span> */}
-          </div>
+          </Link>
             <div className=' block flex gap-8 my-6 '>
                 <div className='flex gap-2'>
                     <p>Explore</p>
@@ -68,7 +74,7 @@ const Navbar = ({isSectionVisible }) => {
                     </p>
                 </div>
             </div>
-            <a className= 'hidden md:block bg-red-500 px-2  my-6 h-[25px] rounded font-semibold text-white' href="">Join Us</a>
+            <Link className= 'hidden md:block bg-red-500 px-2  my-6 h-[25px] rounded font-semibold text-white' to="/joinus">Join Us</Link>
             {/* <div className='md:hidden my-7'><FaBars /></div> */}
         <section  className={chevronOne==false ? 'hidden' :  'absolute   top-[50px]'} id='firstSection'>
           <div className='border w-[500px] flex p-5 ms-40 me-20 gap-20 justify-center items-center bg-white rounded z-[2] relative'>
