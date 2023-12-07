@@ -20,7 +20,7 @@ const JoinUs = () => {
                     <h1 className='text-2xl font-bold'>Get started with Win Realty</h1>
                     <p className='text-xl'>Are you looking to buy or sell a property?</p>
                     <div className='flex flex-col gap-3'>
-                    <Link to=''  className='flex gap-2 border px-2 py-3 rounded'>
+                    <Link to=''  className='flex gap-2 border px-2 py-3 rounded hover:border-yellow-400'>
                         <div className='flex items-center'>
                             <img src={pass1} width={30} className='h-[25px] rounded-full' alt="" />
                             <img src={pass2} width={30} className='h-[25px] rounded-full' alt="" />
@@ -32,7 +32,7 @@ const JoinUs = () => {
                         </div>
                         <div><span className='mt-5 flex'><IoChevronForward /></span></div>
                     </Link>
-                    <Link to=''  className='flex gap-2 border px-2 py-3 rounded'>
+                    <Link to=''  className='flex gap-2 border px-2 py-3 rounded hover:border-yellow-400'>
                         <div className='flex items-center'>
                             <img src={pass4} width={30} className='h-[25px] rounded-full' alt="" />
                             <img src={pass5} width={30} className='h-[25px] rounded-full' alt="" />
