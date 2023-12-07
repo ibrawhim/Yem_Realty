@@ -27,26 +27,26 @@ const JoinUs = () => {
                             <img src={pass3} width={30} className='h-[25px] rounded-full' alt="" />
                         </div>
                         <div>
-                            <h1>I'm a client</h1>
+                            <h1 className='font-bold'>I'm a client</h1>
                             <p className=''><span> i'm looking to buy a property</span></p>
                         </div>
                         <div><span className='mt-5 flex'><IoChevronForward /></span></div>
                     </Link>
-                    <Link to=''  className='flex gap-2 border px-2 py-3 rounded hover:border-yellow-400'>
+                    <Link to='/adminsignup'  className='flex gap-2 border px-2 py-3 rounded hover:border-yellow-400'>
                         <div className='flex items-center'>
                             <img src={pass4} width={30} className='h-[25px] rounded-full' alt="" />
                             <img src={pass5} width={30} className='h-[25px] rounded-full' alt="" />
                             <img src={pass6} width={30} className='h-[25px] rounded-full' alt="" />
                         </div>
                         <div>
-                            <h1>I'm a realtor</h1>
+                            <h1 className='font-bold'>I'm a realtor</h1>
                             <p className='flex'><span>i'm looking to sell a property </span></p>
                         </div>
                         <div><span className='mt-5 flex'><IoChevronForward /></span></div>
                     </Link>
                     </div>
                 </div>
-                <div className='border border-yellow-400 border-2 w-1/2 hidden lg:block'>
+                <div className='border-2 border-yellow-400  w-1/2 hidden lg:block'>
                     <img src={iyin} className='w-full h-screen' alt="" />
                 </div>
             </section>

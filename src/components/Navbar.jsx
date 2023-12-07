@@ -14,7 +14,7 @@ const Navbar = ({isSectionVisible }) => {
   // console.log(isSectionVisible)
   const location = useLocation()
   // const [isOpen, setIsOpen] = useState(false);
-  const hiddenRoutes = ['/joinus']
+  const hiddenRoutes = ['/joinus','/admin']
   const isHidden = hiddenRoutes.includes(location.pathname);
 
   const [chevronOne, setchevronOne] = useState(false)
@@ -54,7 +54,7 @@ const Navbar = ({isSectionVisible }) => {
             <img src={logo} width={40} className='h-[40px]' alt="" />
             {/* <span className='font-bold'>Yem <br />Realty</span> */}
           </Link>
-            <div className=' block flex gap-8 my-6 '>
+            <div className='  flex gap-8 my-6 '>
                 <div className='flex gap-2'>
                     <p>Explore</p>
                     <p className='mt-[3px]'>

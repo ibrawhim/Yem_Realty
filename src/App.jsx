@@ -11,12 +11,19 @@ import Footer from "./components/Footer";
 import Error from "./pages/Error";
 import Estates from "./pages/Estates";
 import JoinUs from "./pages/JoinUs";
-
+import AdminSignUp from "./pages/AdminSignUp";
+import Steppers from "./components/Steppers";
+import { useLocation } from 'react-router-dom'
 
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
   const [isSectionVisible, setSectionVisibility] = useState(false);
+
+  const location = useLocation()
+  // const [isOpen, setIsOpen] = useState(false);
+  const hiddenRoutes = ['/joinus','/admin']
+  const isHidden = hiddenRoutes.includes(location.pathname);
   
 
   const toggleIsOpen = () => {
@@ -40,13 +47,13 @@ function App() {
     <>
     <Navbar isSectionVisible={isSectionVisible}/>
     <div className={isOpen?'block fixed w-full': 'hidden'}><Upbar onClickHandler={handleClick} /></div>
-    <div className="font-[Quicksand] lg:mx-0 sm:mx-0" onClick={handleBodyClick}>
-    <ul className='md:hidden shadow px-5 flex justify-between '>
+    {isHidden ? null :<ul className='md:hidden shadow px-5 flex justify-between '>
           <li><img src={logo} width={40} className='h-[40px] my-2' alt="" /></li>
           <li className='text-black my-6'>
               <FaBars onClick={toggleIsOpen}/>
           </li>
-      </ul>
+      </ul>}
+    <div className="font-[Quicksand] lg:mx-0 sm:mx-0" onClick={handleBodyClick}>
     {/* <div><Upbar/></div> */}
       <Routes>
         <Route path="/"  element={<Landing/>}/>
@@ -55,6 +62,8 @@ function App() {
         <Route path="*"  element={<Error/>}/>
         <Route path='/estates' element={<Estates/>}/>
         <Route path="/joinus"  element={<JoinUs/>}/>
+        <Route path="adminsignup" element={<AdminSignUp/>}/>
+        <Route path="/admin"  element={<Steppers/>}/>
         {/* <Route path="/card"  element={<Carousel/>}/> */}
       </Routes>
     </div>

@@ -8,7 +8,7 @@ const Footer = () => {
 
     const location = useLocation()
     // const [isOpen, setIsOpen] = useState(false);
-    const hiddenRoutes = ['/joinus', '/*']
+    const hiddenRoutes = ['/joinus', '/*','/admin']
     const isHidden = hiddenRoutes.includes(location.pathname);
 
 
