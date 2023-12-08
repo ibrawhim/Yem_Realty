@@ -15,8 +15,8 @@ const initialData =()=>   {
             
            localGovernment: '',
            state: '',
-           Nationality: ''
-            
+           Nationality: '',
+           Address: '' 
         }
     
     }
@@ -25,6 +25,12 @@ const initialData =()=>   {
         name: 'adminSignUp',
         initialState: {
             adminSign: initialData()
+        },
+        reducers: {
+            handleNextStep: (state)=> {
+                state.adminSign.currentStep++
+            }
         }
     })
     export default slice.reducer    
+    export const {handleNextStep} = slice.actions

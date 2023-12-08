@@ -1,19 +1,39 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { handleNextStep } from '../redux/admin';
+import AdminSignUp from '../pages/AdminSignUp';
+import AdminSignCont from '../pages/AdminSignCont';
 
 
 const Steppers = ({currentIndex}) => {
   console.log(currentIndex);
+
+  const steps = [
+    "Your Info",
+    "Address",
+    "Summary"
+]
   
   return (
     <>
        <div className=''>
             <section className='flex flex-col lg:flex-row'>
                 <div className='border-4 border-yellow-600'>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni necessitatibus unde ipsa ut quisquam reiciendis esse dolorem velit dolore sed sequi excepturi illo et nesciunt vitae, explicabo numquam consequatur aliquid itaque obcaecati facilis. Aliquam fugit, nobis perspiciatis laborum vero, rerum eius in explicabo similique distinctio non atque voluptas consequatur reiciendis? Delectus accusamus expedita alias sint fugiat, dicta quaerat. Unde ad corrupti asperiores, non velit quae quidem. Architecto minima ad et dignissimos voluptate. Laudantium soluta rem suscipit praesentium. Distinctio necessitatibus inventore maxime sapiente quod est voluptatem impedit commodi a at ut nesciunt vitae corrupti blanditiis reiciendis, alias debitis possimus asperiores sint.
+                   {
+                    steps.map((items,i)=>(
+                      <div key={i} className='flex py-5 lg:w-40'>
+                                <div className={`${currentIndex === i ? 'bg-black text-white' : ''} w-[35px] text-center font-bold  flex justify-center items-center mt-1 border h-[35px] rounded-full me-2`}>{i + 1}</div>
+                                <div className='hidden lg:block text-center'>
+                                <div className='step1 font-bold text-white'>STEP{i + 1}</div>
+                                <div className='text-black'>{items}</div>
+                                </div>
+                      </div>
+                    ))
+                   }
                 </div>
                 <div className='border-4 border-red-500'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident itaque exercitationem cupiditate placeat quis nulla vel, ipsa non officiis, expedita at saepe cum impedit adipisci magnam veniam recusandae voluptatibus maxime accusamus corrupti. Temporibus fuga laudantium est alias tempora. Eius aut optio illo possimus dignissimos magni doloribus nemo sequi illum quisquam veritatis impedit accusamus omnis dolores, voluptates fugiat ut suscipit ratione! Vero voluptas officia quibusdam fuga quae enim veniam ipsum quis fugit sed, placeat odio neque dolorum dicta, laboriosam similique veritatis dignissimos quidem maxime itaque excepturi natus nulla nemo. Inventore reiciendis totam quibusdam nesciunt. Temporibus ipsum dolore placeat, ratione impedit earum nisi eius debitis distinctio animi perferendis error aperiam dolorem dolorum cum atque soluta consectetur provident similique assumenda. Iste quae, voluptates iusto, vero beatae voluptatem maxime ab suscipit ut aliquid cum inventore id, sapiente minima cumque vel eligendi! Accusamus earum laboriosam doloribus nemo nobis fuga obcaecati veniam quia harum nesciunt rem ipsam, totam vitae cupiditate. Sunt optio adipisci facilis ab, a hic placeat labore voluptas tempore veniam modi minus quo possimus atque autem similique. Architecto veritatis ab iusto, harum earum, repudiandae placeat nostrum sunt voluptatum delectus blanditiis modi laborum amet obcaecati sint vel atque, velit tempora ea rem! Facilis debitis obcaecati iusto doloribus reprehenderit deserunt hic animi, ut aliquid, tempore culpa? Esse illo voluptatum libero rem non ad eos architecto distinctio vitae consequatur commodi obcaecati harum nobis beatae possimus aperiam ab sequi dolores laborum recusandae magnam, corrupti sapiente. Veniam officia aperiam eligendi voluptates saepe animi illum nostrum asperiores ducimus eum! Dolores voluptatem quae nulla pariatur! Corrupti, architecto natus explicabo commodi porro distinctio amet ipsa sint voluptates esse! Laudantium, optio. Vel voluptatum quo alias iste unde magni rem eos dolor similique explicabo provident deserunt voluptate ut reprehenderit odio beatae totam nemo et, laboriosam eum ducimus facilis? Voluptas modi quod obcaecati corporis adipisci odio laudantium perspiciatis in voluptatibus veritatis, qui repellendus consectetur doloribus dicta dolorum magnam. Necessitatibus nulla velit ut eius repudiandae. Quia quos voluptatem, eum vel voluptate ratione placeat maiores iste, sit, qui possimus suscipit alias? Dolorum explicabo excepturi recusandae veniam quam deleniti animi quibusdam iusto. Quae quas quo placeat eveniet, provident eaque magnam labore sint assumenda aperiam recusandae enim odio maxime eum et quam obcaecati officia ut minus accusantium modi laudantium est! Animi molestiae a voluptatem. Possimus ullam nostrum veniam vel praesentium, molestias ad distinctio facere sapiente officia facilis unde dolores amet, vitae aut vero modi tenetur quos qui? Eaque ab totam ipsam, autem quibusdam quidem assumenda! Itaque placeat nobis repellat inventore, atque doloribus fugiat ipsa! Ut qui aspernatur fugiat nam, nostrum inventore atque optio ipsam dignissimos, distinctio accusamus exercitationem, quisquam autem. Atque dolor sint, facilis nobis perspiciatis perferendis iusto fuga, modi, exercitationem harum ea totam laborum veritatis ex fugiat cum doloribus sed ab. Maxime odit magnam blanditiis totam magni cum, quas tempora atque iste! Nam doloremque laudantium repellendus adipisci atque eaque similique nihil vitae odit, distinctio incidunt quas beatae ab rem sed dicta molestiae ipsum ex ut accusantium voluptatibus accusamus? Beatae vitae eius laborum quaerat error doloribus dolorum dolor nobis.
+                {currentIndex===0 && <AdminSignUp/>}
+                {currentIndex===1 && <AdminSignCont/>}
                 </div>
             </section>
        </div>
