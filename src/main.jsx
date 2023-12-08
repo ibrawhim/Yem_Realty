@@ -5,10 +5,10 @@ import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
-
+import adminReducer from './redux/admin.js'
 
 const store = configureStore({
-  reducer: {}
+  reducer: {adminReducer}
 })
 
 ReactDOM.createRoot(document.getElementById('root')).render(

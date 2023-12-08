@@ -1,6 +1,10 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
-const Steppers = () => {
+
+const Steppers = ({currentIndex}) => {
+  console.log(currentIndex);
+  
   return (
     <>
        <div className=''>

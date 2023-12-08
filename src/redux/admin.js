@@ -10,14 +10,21 @@ const initialData =()=>   {
             fullName: '',
             Email: '',
             Phone: '',
+            Age: '',
+            Sex: '',
             
-            whatAreYouSelling: '',
-            LGA: '',
-            planAmount: 0,
+           localGovernment: '',
+           state: '',
+           Nationality: ''
             
-            addOnTypes: [],
-            addOnTotalAmount: 0
         }
     
     }
-    
+
+    export const slice = createSlice({
+        name: 'adminSignUp',
+        initialState: {
+            adminSign: initialData()
+        }
+    })
+    export default slice.reducer    

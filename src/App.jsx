@@ -14,9 +14,13 @@ import JoinUs from "./pages/JoinUs";
 import AdminSignUp from "./pages/AdminSignUp";
 import Steppers from "./components/Steppers";
 import { useLocation } from 'react-router-dom'
+import { useDispatch, useSelector } from "react-redux";
 
 
 function App() {
+  const currentIndex = useSelector((state) => state.adminReducer.adminSign.currentStep)
+  // console.log(currentIndex);
+
   const [isOpen, setIsOpen] = useState(false)
   const [isSectionVisible, setSectionVisibility] = useState(false);
 
@@ -63,7 +67,7 @@ function App() {
         <Route path='/estates' element={<Estates/>}/>
         <Route path="/joinus"  element={<JoinUs/>}/>
         <Route path="adminsignup" element={<AdminSignUp/>}/>
-        <Route path="/admin"  element={<Steppers/>}/>
+        <Route path="/admin"  element={<Steppers currentIndex={currentIndex}/>}/>
         {/* <Route path="/card"  element={<Carousel/>}/> */}
       </Routes>
     </div>
