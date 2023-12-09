@@ -14,8 +14,8 @@ const JoinUs = () => {
   return (
     <>
         <div>
-            <section className='flex w-full justify-between border'>
-                <div className='flex flex-col justify-center items-center gap-3 lg:w-1/2 w-full h-screen border border-red-500'>
+            <section className='flex w-full justify-between'>
+                <div className='flex flex-col justify-center items-center gap-3 lg:w-1/2 w-full h-screen'>
                     <img src={ylogo}  width={40} alt="" />
                     <h1 className='text-2xl font-bold'>Get started with Win Realty</h1>
                     <p className='text-xl'>Are you looking to buy or sell a property?</p>
@@ -46,7 +46,7 @@ const JoinUs = () => {
                     </Link>
                     </div>
                 </div>
-                <div className='border-2 border-yellow-400  w-1/2 hidden lg:block'>
+                <div className='  w-1/2 hidden lg:block'>
                     <img src={iyin} className='w-full h-screen' alt="" />
                 </div>
             </section>
