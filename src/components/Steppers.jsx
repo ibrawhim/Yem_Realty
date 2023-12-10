@@ -16,13 +16,13 @@ const Steppers = ({currentIndex}) => {
   
   return (
     <>
-       <div className=''>
-            <section className='flex flex-col lg:flex-row'>
-                <div className='border-4 border-yellow-600'>
+       <div className='w-full border'>
+            <section className='flex flex-row justify-center'>
+                <div className=' px-4 shadow'>
                    {
                     steps.map((items,i)=>(
                       <div key={i} className='flex py-5 lg:w-40'>
-                                <div className={`${currentIndex === i ? 'bg-black text-white' : ''} w-[35px] text-center font-bold  flex justify-center items-center mt-1 border h-[35px] rounded-full me-2`}>{i + 1}</div>
+                                <div className={`${currentIndex === i && 'bg-black text-white' } w-[35px] text-center font-bold flex sm justify-center items-center mt-4 border h-[35px] rounded-full lg:me-2 me-0`}>{i + 1}</div>
                                 <div className='hidden lg:block text-center'>
                                 <div className='step1 font-bold text-white'>STEP{i + 1}</div>
                                 <div className='text-black'>{items}</div>
@@ -31,7 +31,7 @@ const Steppers = ({currentIndex}) => {
                     ))
                    }
                 </div>
-                <div className='border-4 border-red-500'>
+                <div className='shadow p-5'>
                 {currentIndex===0 && <AdminSignUp/>}
                 {currentIndex===1 && <AdminSignCont/>}
                 </div>

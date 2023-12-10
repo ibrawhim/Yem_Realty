@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
 import adminReducer from './redux/admin.js'
+import './index.css'
 
 const store = configureStore({
   reducer: {adminReducer}

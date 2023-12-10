@@ -15,6 +15,7 @@ import AdminSignUp from "./pages/AdminSignUp";
 import Steppers from "./components/Steppers";
 import { useLocation } from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux";
+import './App.css'
 
 
 function App() {
