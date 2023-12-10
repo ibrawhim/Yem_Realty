@@ -6,7 +6,7 @@ import AdminSignCont from '../pages/AdminSignCont';
 
 
 const Steppers = ({currentIndex}) => {
-  console.log(currentIndex);
+  // console.log(currentIndex);
 
   const steps = [
     "Your Info",

@@ -72,9 +72,9 @@ const Landing = () => {
   return (
     <>
         <div className='w-full my-20'>
-            <h1 className='text-center text-3xl md:text-4xl font-bold'>Discover the Most Profitable <br /> Properties in Ibadan</h1>
+            <h1 className='text-center text-3xl md:text-4xl lg:mx-0 sm:mx-10 font-bold'>Discover the Most Profitable <br /> Properties in Ibadan</h1>
             <p className='text-center my-5 justify '>Get exclusive access to premium and affordable real estate properties with secured <br /> lucrative investments. Don't miss out on the chance to make well-informed <br /> decisions and enjoy maximum returns.</p>
-            <div className='flex md:flex-row md:flex-row flex-col justify-center items-center gap-2'>
+            <div className='flex md:flex-row  flex-col justify-center items-center gap-2'>
               <a className='border p-2 rounded bg-black text-white text-center w-[130px]' href="">Get Started</a>
               <a className='border p-2 rounded bg-white' href="">Explore Properties</a>
             </div>
@@ -131,7 +131,7 @@ const Landing = () => {
               <Carousell/>
               <button className='flex justify-center text-white p-2 rounded  my-10 mx-auto bg-black'>View More</button>
             </section>
-            <section className='lg:mx-5 lg:mx-20 mx-10 mt-40 relative'>
+            <section className=' lg:mx-20 mx-10 mt-40 relative'>
               <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-5'>
                 <div className='md:mx-10 '>
                   <p className='font-semibold'>Want to buy a property?</p>
@@ -143,7 +143,7 @@ const Landing = () => {
                   <img src={newImage} className='rounded w-full' width={400} alt=""/>
                 </div>
               </div>
-              <img src={adult} width={80} className='rounded-full h-[80px] absolute top-[-10%] left-[49%] border border-4 border-red-500 hidden md:block' alt="" />
+              <img src={adult} width={80} className='rounded-full h-[80px] absolute top-[-10%] left-[49%]  border-4 border-red-500 hidden md:block' alt="" />
             </section>
             <section className='lg:mx-20 mx-10 my-20'>
               <h1 className='my-2 font-bold text-2xl text-center'>Values we give to you</h1>
@@ -181,7 +181,7 @@ const Landing = () => {
                 </div>
               </div>
             </section>
-            <section className='lg:mx-5 lg:mx-20 mx-10 mt-40 relative'>
+            <section className='lg:mx-20 mx-10 mt-40 relative'>
               <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-5 '>
                 <div className='md:mx-10 '>
                   <p className='font-semibold'>Want to sell a property?</p>
@@ -193,7 +193,7 @@ const Landing = () => {
                   <img src={sale1} className='rounded w-full' width={400} alt="" />
                 </div>
               </div>
-              <img src={sale2} width={80} className='rounded-full h-[80px] absolute top-[-10%] left-[49%] border border-4 border-red-500 hidden md:block' alt="" />
+              <img src={sale2} width={80} className='rounded-full h-[80px] absolute top-[-10%] left-[49%]  border-4 border-red-500 hidden md:block' alt="" />
             </section>
             <section className='mx-10 my-20'>
               <h1 className='text-2xl text-center mt-5 font-bold'>Estates & Partners</h1>

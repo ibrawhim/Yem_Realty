@@ -7,14 +7,15 @@ const initialData =()=>   {
     return item ? JSON.parse(item) : {
             currentStep: 0,
             
-            fullName: '',
+            Name: '',
+            Lastname: '',
             Email: '',
             Phone: '',
-            Age: '',
-            Sex: '',
+            Dob: '',
+            Gender: '',
             
            localGovernment: '',
-           state: '',
+           state: 'Oyo',
            Nationality: '',
            Address: '' 
         }
