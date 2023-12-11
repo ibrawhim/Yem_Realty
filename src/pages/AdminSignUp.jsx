@@ -25,7 +25,7 @@ const AdminSignUp = () => {
 
 const onSubmit = (data) => {
   let form = {...store, ...data}
-  console.log(form);
+  // console.log(form);
   dispatch(handleNextStep(form))
 }
 
@@ -56,16 +56,7 @@ const onSubmit = (data) => {
                         <input {...register("Phone")} type="text" className={`border border-black h-[40px] mt-3 rounded w-full`} />
                         <p className='text-red-600'></p>
                     </div>
-                    <div className='my-5'>
-                        <label className='font-bold' htmlFor="">Age</label><br />
-                        <input {...register("Dob")} type="text" className={`border border-black h-[40px] mt-3 rounded w-full`} />
-                        <p className='text-red-600'></p>
-                    </div>
-                    <div className='my-5'>
-                        <label className='font-bold' htmlFor="">Gender</label><br />
-                        <input {...register("Gender")} type="text" className={`border border-black h-[40px] mt-3 rounded w-full`} />
-                        <p className='text-red-600'></p>
-                    </div>
+
                     <button type='submit' className=''>CONFIRM</button>
                 </form>
 

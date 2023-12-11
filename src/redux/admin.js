@@ -9,10 +9,10 @@ const initialData =()=>   {
             
             Name: '',
             Lastname: '',
+            Dob: '',
+            gender: '',
             Email: '',
             Phone: '',
-            Dob: '',
-            Gender: '',
             
            localGovernment: '',
            state: 'Oyo',

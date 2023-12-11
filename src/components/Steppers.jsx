@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { handleNextStep } from '../redux/admin';
 import AdminSignUp from '../pages/AdminSignUp';
 import AdminSignCont from '../pages/AdminSignCont';
+import Summary from '../pages/Summary';
 
 
 const Steppers = ({currentIndex}) => {
@@ -34,6 +35,7 @@ const Steppers = ({currentIndex}) => {
                 <div className='shadow p-5'>
                 {currentIndex===0 && <AdminSignUp/>}
                 {currentIndex===1 && <AdminSignCont/>}
+                {currentIndex===2 && <Summary/>}
                 </div>
             </section>
        </div>
