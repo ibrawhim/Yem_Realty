@@ -8,7 +8,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 const AdminSignUp = () => {
   let dispatch = useDispatch()
   const store = useSelector((state)=> state.adminReducer.adminSign)
-  console.log(store);
+  // console.log(store);
 
 
 

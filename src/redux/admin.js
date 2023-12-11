@@ -13,11 +13,10 @@ const initialData =()=>   {
             gender: '',
             Email: '',
             Phone: '',
-            
-           localGovernment: '',
-           state: 'Oyo',
-           Nationality: '',
-           Address: '' 
+            localGovernment: '',
+            state: 'Oyo',
+            Nationality: '',
+            Address: '' 
         }
     
     }
