@@ -35,29 +35,29 @@ const onSubmit = (data) => {
         <div className='lg:w-[300px] md:w-[300px] w-[250px]'>
             {/* <button onClick={()=> dispatch(handleNextStep())}>Next</button> */}
             <form action="" onSubmit={handleSubmit(onSubmit)}>
-                    <div className='my-5'>
+                    <div className='my-2'>
                          <label className='font-bold' htmlFor="">First Name</label><br />
                         <input {...register("Name")} type="text" className={`border border-black h-[40px] rounded w-full mt-3`}/>
                         <p className='text-red-600'></p>
                     </div>
-                    <div className='my-5'>
+                    <div className='my-2'>
                          <label className='font-bold' htmlFor="">Last Name</label><br />
                         <input {...register("Lastname")} type="text" className={`border border-black h-[40px] rounded w-full mt-3`}/>
                         <p className='text-red-600'></p>
                     </div>
 
-                    <div className='my-5'>
+                    <div className='my-2'>
                         <label className='font-bold' htmlFor="">Email Address</label><br />
                         <input {...register("Email")} type="text" className={`border border-black h-[40px] mt-3 rounded w-full`}/>
                         <p className='text-red-600'></p>
                     </div>
-                    <div className='my-5'>
+                    <div className='my-2'>
                         <label className='font-bold' htmlFor="">Phone</label><br />
                         <input {...register("Phone")} type="text" className={`border border-black h-[40px] mt-3 rounded w-full`} />
                         <p className='text-red-600'></p>
                     </div>
 
-                    <button type='submit' className=''>CONFIRM</button>
+                    <button type='submit' className='float-right bg-black text-white p-2 rounded'>Next</button>
                 </form>
 
         </div>

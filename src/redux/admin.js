@@ -15,8 +15,8 @@ const initialData =()=>   {
             Phone: '',
             localGovernment: '',
             state: 'Oyo',
-            Nationality: '',
-            Address: '' 
+            nationality: '',
+            address: '' 
         }
     
     }
@@ -31,8 +31,11 @@ const initialData =()=>   {
                 state.adminSign = {...state.adminSign, ...action.payload}
                 state.adminSign.currentStep++
                 localStorage.setItem("adminSignUp", JSON.stringify(state.adminSign))
-            }
+            },
+            handlePreviousStep: (state, action)=> {
+                state.adminSign.currentStep--
+            },
         }
     })
     export default slice.reducer    
-    export const {handleNextStep} = slice.actions
+    export const {handleNextStep, handlePreviousStep} = slice.actions
