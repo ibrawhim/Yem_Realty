@@ -42,19 +42,19 @@ const onSubmit = (data) => {
                         <input {...register("Gender")} type="text" className={`border border-black h-[40px] mt-3 rounded w-full`} />
                         <p className='text-red-600'></p>
                     </div> */}
-                    {/* <div className='my-5'>
+                    <div className='my-5'>
                         <label className='font-bold' htmlFor="">Age</label><br />
-                        <input {...register("Dob")} type="text" className={`border border-black h-[40px] mt-3 rounded w-full`} />
+                        <input {...register("Age")} type="text" className={`border border-black h-[40px] mt-3 rounded w-full`} />
                         <p className='text-red-600'></p>
-                    </div> */}
+                    </div>
 
                 
-                    <label className='font-bold' htmlFor="">Gender</label><br />
+                    {/* <label className='font-bold' htmlFor="">Gender</label><br />
                         <select {...register("gender")}>
                         <option value="female">female</option>
                         <option value="male">male</option>
                         <option value="other">other</option>
-                    </select>
+                    </select> */}
                   
                     <button type='submit' className=''>CONFIRM</button>
                 </form>
