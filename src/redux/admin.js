@@ -9,7 +9,7 @@ const initialData =()=>   {
             
             Name: '',
             Lastname: '',
-            Dob: '',
+            dob: '',
             gender: '',
             Email: '',
             Phone: '',
@@ -27,8 +27,10 @@ const initialData =()=>   {
             adminSign: initialData()
         },
         reducers: {
-            handleNextStep: (state)=> {
+            handleNextStep: (state, action)=> {
+                state.adminSign = {...state.adminSign, ...action.payload}
                 state.adminSign.currentStep++
+                localStorage.setItem("adminSignUp", JSON.stringify(state.adminSign))
             }
         }
     })

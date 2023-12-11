@@ -4,6 +4,7 @@ import { handleNextStep } from '../redux/admin';
 import AdminSignUp from '../pages/AdminSignUp';
 import AdminSignCont from '../pages/AdminSignCont';
 import Summary from '../pages/Summary';
+import Address from '../pages/Address';
 
 
 const Steppers = ({currentIndex}) => {
@@ -35,7 +36,7 @@ const Steppers = ({currentIndex}) => {
                 <div className='shadow p-5'>
                 {currentIndex===0 && <AdminSignUp/>}
                 {currentIndex===1 && <AdminSignCont/>}
-                {currentIndex===2 && <Summary/>}
+                {currentIndex===2 && <Address/>}
                 </div>
             </section>
        </div>
