@@ -1,21 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { handleNextStep, handlePreviousStep } from '../redux/admin'
 import { useDispatch, useSelector } from 'react-redux'
 import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { MdErrorOutline } from "react-icons/md";
+
 
 const AdminSignUp = () => {
 
   let dispatch = useDispatch()
   const store = useSelector((state)=> state.adminReducer.adminSign)
   // console.log(store);
-
+  useEffect(() => {
+    if (store) {
+        setValue("dob", store.dob)
+        setValue("gender", store.gender)
+    }
+  }, [])
 
 
   const Schema = yup.object().shape({
-    dob: yup.string().required(),
-    gender: yup.string().required()
+    dob: yup.string().required( <span className='flex'><span className='mt-1 me-1'><MdErrorOutline /></span> <span>Select Date of Birth</span></span> ),
+    gender: yup.string().required( <span className='flex'><span className='mt-1 me-1'><MdErrorOutline /></span> <span>Select a Gender</span></span> )
   })
   const { register, handleSubmit, setValue, formState: { errors }, } = useForm({
     resolver: yupResolver(Schema)
@@ -32,38 +39,25 @@ const onSubmit = (myData) => {
   
   return (
     <>
-        {/* <button onClick={()=>dispatch(handleNextStep())}>Here</button> */}
-        <div className='lg:w-[300px] md:w-[300px] w-[250px]'>
-            {/* <form action="" onSubmit={handleSubmit(onSubmit)}>
-                    <div className='my-5'>
-                        <label className='font-bold' htmlFor="">Age</label><br />
-                        <input {...register("Dob")} type="text" className={`border border-black h-[40px] mt-3 rounded w-full`} />
-                        <p className='text-red-600'></p>
-                    </div>
-                    <label className='font-bold' htmlFor="">Gender</label><br />
-                        <select {...register("gender")}>
-                        <option value="female">female</option>
-                        <option value="male">male</option>
-                        <option value="other">other</option>
-                    </select>
-                  <button type='submit' className=''>Next</button>
-            </form> */}
+        <div className='lg:w-[300px] md:w-[300px] w-[250px] h-[340px]'>
               <form action="" onSubmit={handleSubmit(onSubmit)}>
                     <div className='my-2'>
                         <label className='font-bold' htmlFor="">Age</label><br />
-                        <input {...register("dob")} type="text" className={`border border-black h-[40px] mt-3 rounded w-full`}/>
-                        <p className='text-red-600'></p>
+                        <input {...register("dob")} type="date" className={`border border-black h-[40px] mt-3 rounded w-full`}/>
+                        <p className='text-red-600'>{errors.dob?.message}</p>
                     </div>
                     <div className='mt-2 mb-5'>
                         <label className='font-bold' htmlFor="">Gender</label><br />
-                        <select {...register("gender")} className='w-full'>
+                        <select {...register("gender")} className='w-full rounded focus:outline-none'>
+                        <option value="">Select Gender</option>
                         <option value="female">female</option>
                         <option value="male">male</option>
                         <option value="other">other</option>
                     </select>
+                    <p className='text-red-600'>{errors.gender?.message}</p>
                     </div>
-                    <button onClick={()=>dispatch(handlePreviousStep())} className=' bg-black text-white rounded p-2'>Previous</button>
-                    <button type='submit' className='float-right bg-black text-white rounded p-2'>Next</button>
+                    <button onClick={()=>dispatch(handlePreviousStep())} className=' bg-red-700 text-white rounded p-2 mt-[50%]'>Previous</button>
+                    <button type='submit' className='float-right bg-red-700 text-white rounded p-2 mt-[50%]'>Next</button>
                 </form>
         </div>
     </>
