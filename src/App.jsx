@@ -36,16 +36,11 @@ function App() {
     // console.log(isOpen);
   }
   const handleClick = () => {
-    // console.log('Button clicked!')
     setIsOpen(false)
   };
 
   const handleBodyClick = () => {
     setSectionVisibility(!isSectionVisible)
-    //  if (!isSectionVisible){
-    //   setSectionVisibility(isSectionVisible == true)
-    // }
-    
   };
   
 

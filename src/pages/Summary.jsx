@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { handlePreviousStep } from '../redux/admin'
+import { handleNextStep, handlePreviousStep } from '../redux/admin'
 
 
 const Summary = () => {
@@ -36,7 +36,7 @@ const Summary = () => {
           </section>
           <div className='flex justify-between mt-[10%]'>
             <button className='bg-red-700 p-2 rounded font-bold text-white' onClick={()=>dispatch(handlePreviousStep())}>Go Back</button>
-            <button className='bg-red-700 p-2 rounded font-bold text-white'>Confirm</button>
+            <button onClick={()=>dispatch(handleNextStep())} className='bg-red-700 p-2 rounded font-bold text-white'>Confirm</button>
           </div>
         </div>
     </>
