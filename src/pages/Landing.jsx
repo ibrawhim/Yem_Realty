@@ -237,7 +237,7 @@ const Landing = () => {
               <div className=' flex flex-col justify-center mx-auto'>
                 <p className='text-2xl font-bold text-center lg:text-left lg:mx-0'>Become a Real Estate Agent</p>
                 <p className='my-3 w-full lg:w-[300px] text-center lg:text-left'>Join hundreds of our Win Associates making millons monthly selling our properties.</p>
-                <a href="" className='bg-red-500  lg:w-[120px] md:w-[120px] w-[120px] ps-4 p-2 rounded text-white mx-auto lg:mx-0'>Register Now</a>
+                <a href="" className='bg-red-500  lg:w-[150px] md:w-[150px] w-[150px] ps-4 p-2 rounded text-center text-white mx-auto lg:mx-0'>Register Now</a>
               </div>
               <div className='lg:block hidden'>
                 <img src={kay} width={350} alt="" />
