@@ -107,9 +107,9 @@ const Landing = () => {
                 </div>
               </div>
             </section>
-            <section>
+            <section className=''>
               <h1 className='text-center text-2xl font-bold my-6'>Featured Estates</h1>
-              <div className='grid md:grid-cols-4 sm:grid-cols-1 gap-5 mx-5'>
+              <div className='grid md:grid-cols-4 sm:grid-cols-1 gap-5 mx-5 relative' style={{zIndex:'-1'}}>
               {
                 estates.map((item, index)=>(
                   <div key={index} className='border border-black rounded relative  shadow-xl' style={myStyle}>
@@ -126,13 +126,13 @@ const Landing = () => {
                 <Link to="/estates" className='text-white bg-black p-2 rounded'>Explore Estates</Link>
               </div>
             </section>
-            <section className='my-10'>
+            <section className='my-10 relative' style={{zIndex:'-1'}}>
               <h1 className='text-center font-bold text-2xl my-5'>Explore Trending Places</h1>
               <Carousell/>
               <button className='flex justify-center text-white p-2 rounded  my-10 mx-auto bg-black'>View More</button>
             </section>
             <section className=' lg:mx-20 mx-10 mt-40 relative'>
-              <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-5'>
+              <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-5 relative' style={{zIndex:'-1'}}>
                 <div className='md:mx-10 '>
                   <p className='font-semibold'>Want to buy a property?</p>
                   <p className='text-2xl font-bold mt-4'>Buy a dream home for your family</p>
@@ -182,7 +182,7 @@ const Landing = () => {
               </div>
             </section>
             <section className='lg:mx-20 mx-10 mt-40 relative'>
-              <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-5 '>
+              <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-5 relative' style={{zIndex:'-1'}}>
                 <div className='md:mx-10 '>
                   <p className='font-semibold'>Want to sell a property?</p>
                   <p className='text-2xl font-bold mt-4'>We believe everyone can sell a property</p>
@@ -190,7 +190,7 @@ const Landing = () => {
                   <a className='bg-black text-white p-2 rounded' href="">Get Started</a>
                 </div>
                 <div>
-                  <img src={sale1} className='rounded w-full' width={400} alt="" />
+                  <img src={sale1} className='rounded w-full ' width={400} alt="" />
                 </div>
               </div>
               <img src={sale2} width={80} className='rounded-full h-[80px] absolute top-[-10%] left-[49%]  border-4 border-red-500 hidden md:block' alt="" />
