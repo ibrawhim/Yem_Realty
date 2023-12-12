@@ -40,6 +40,7 @@ const onSubmit = (myData) => {
   return (
     <>
         <div className='lg:w-[300px] md:w-[300px] w-[250px] h-[340px]'>
+          <h1 className='text-center text-xl font-bold text-red-700'>Your Info (Contd.)</h1>
               <form action="" onSubmit={handleSubmit(onSubmit)}>
                     <div className='my-2'>
                         <label className='font-bold' htmlFor="">Age</label><br />
