@@ -1,8 +1,6 @@
 import React from 'react'
 import thank from '../images/thank.svg'
-
-
-
+import { Link } from 'react-router-dom'
 
 
 const Thank = () => {
@@ -17,6 +15,9 @@ const Thank = () => {
     </div>
     <div className='flex justify-center'>
     {/* <button className='underline' onClick={handlePrevious}>Go Back</button> */}
+    </div>
+    <div className='my-5 flex justify-center'>
+      <Link className='text-center underline text-blue-400 hover:text-red-400 font-semibold' to='/adminsignin'>Proceed to Sign In</Link>
     </div>
     </div>
     </>

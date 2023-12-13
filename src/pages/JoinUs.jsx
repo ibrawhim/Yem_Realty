@@ -32,7 +32,7 @@ const JoinUs = () => {
                         </div>
                         <div><span className='mt-5 flex'><IoChevronForward /></span></div>
                     </Link>
-                    <Link to='/adminsignup'  className='flex gap-2 border px-2 py-3 rounded hover:border-yellow-400'>
+                    <Link to='/admin'  className='flex gap-2 border px-2 py-3 rounded hover:border-yellow-400'>
                         <div className='flex items-center'>
                             <img src={pass4} width={30} className='h-[25px] rounded-full' alt="" />
                             <img src={pass5} width={30} className='h-[25px] rounded-full' alt="" />
