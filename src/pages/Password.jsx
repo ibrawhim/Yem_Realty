@@ -37,7 +37,7 @@ const onSubmit = (myData) => {
     let form = {...store, ...myData}
     dispatch(handleNextStep(form))
   }else {
-        setMatch('Password does not match')
+        setMatch('Password do not match')
   }
   
 }
@@ -49,12 +49,12 @@ const onSubmit = (myData) => {
               <form action="" onSubmit={handleSubmit(onSubmit)}>
                     <div className='my-2'>
                         <label className='font-bold' htmlFor="">Password</label><br />
-                        <input {...register("password")} type="text" className={`border border-black h-[40px] mt-3 rounded w-full`}/>
+                        <input {...register("password")} type="password" className={`border border-black h-[40px] mt-3 rounded w-full`}/>
                         <p className='text-red-600'>{errors.password?.message}</p>
                     </div>
                     <div className='my-2'>
                         <label className='font-bold' htmlFor="">Confirm Password</label><br />
-                        <input  {...register("confirm")} type="text" className={`border border-black h-[40px] mt-3 rounded w-full`}/>
+                        <input  {...register("confirm")} type="password" className={`border border-black h-[40px] mt-3 rounded w-full`}/>
                         <p className='text-red-600'>{ errors.confirm?.message}</p>
                         <p className='text-red-600'>{match}</p>
                     </div> 
