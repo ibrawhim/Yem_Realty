@@ -43,7 +43,7 @@ const onSubmit = (myData) => {
           <h1 className='text-center text-xl font-bold text-red-700'>Your Info (Contd.)</h1>
               <form action="" onSubmit={handleSubmit(onSubmit)}>
                     <div className='my-2'>
-                        <label className='font-bold' htmlFor="">Age</label><br />
+                        <label className='font-bold' htmlFor="">Date of Birth</label><br />
                         <input {...register("dob")} type="date" className={`border border-black h-[40px] mt-3 rounded w-full`}/>
                         <p className='text-red-600'>{errors.dob?.message}</p>
                     </div>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { handleNextStep, handlePreviousStep } from '../redux/admin'
 import { useDispatch, useSelector } from 'react-redux'
 import { useForm } from 'react-hook-form'
@@ -8,6 +8,7 @@ import { MdErrorOutline } from "react-icons/md";
 
 
 const Password = () => {
+    const [match, setMatch] = useState('')
 
   let dispatch = useDispatch()
   const store = useSelector((state)=> state.adminReducer.adminSign)
@@ -32,16 +33,19 @@ const Password = () => {
 
 
 const onSubmit = (myData) => {
-  // console.log(data.gender);
-  let form = {...store, ...myData}
-  dispatch(handleNextStep(form))
+  if(myData.password == myData.confirm){
+    let form = {...store, ...password}
+    dispatch(handleNextStep(form))
+  }else {
+        setMatch('Password does not match')
+  }
+  
 }
 
   
   return (
     <>
         <div className='lg:w-[300px] md:w-[300px] w-[250px] h-[340px]'>
-          {/* <h1 className='text-center text-xl font-bold text-red-700'>Your Info (Contd.)</h1> */}
               <form action="" onSubmit={handleSubmit(onSubmit)}>
                     <div className='my-2'>
                         <label className='font-bold' htmlFor="">Password</label><br />
@@ -49,9 +53,10 @@ const onSubmit = (myData) => {
                         <p className='text-red-600'>{errors.password?.message}</p>
                     </div>
                     <div className='my-2'>
-                        <label className='font-bold' htmlFor="">Confirm</label><br />
-                        <input  {...register("password")} type="text" className={`border border-black h-[40px] mt-3 rounded w-full`}/>
-                        <p className='text-red-600'>{errors.confirm?.message}</p>
+                        <label className='font-bold' htmlFor="">Confirm Password</label><br />
+                        <input  {...register("confirm")} type="text" className={`border border-black h-[40px] mt-3 rounded w-full`}/>
+                        <p className='text-red-600'>{ errors.confirm?.message}</p>
+                        <p className='text-red-600'>{match}</p>
                     </div> 
                     <button onClick={()=>dispatch(handlePreviousStep())} className=' bg-red-700 text-white rounded p-2 mt-[35%]'>Previous</button>
                     <button type='submit' className='float-right bg-red-700 text-white rounded p-2 mt-[35%]'>Next</button>
