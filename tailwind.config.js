@@ -6,7 +6,11 @@ export default {
     "./node_modules/flowbite/**/*.js"
   ],
   theme: {
-    extend: {},
+    extend: {
+      ring: {
+        default: 'ring-offset-transparent focus:ring-0',
+      },
+    },
   },
   plugins: [
     require('flowbite/plugin')

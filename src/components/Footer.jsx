@@ -7,9 +7,10 @@ import { useState } from 'react'
 const Footer = () => {
 
     const location = useLocation()
-    // const [isOpen, setIsOpen] = useState(false);
-    const hiddenRoutes = ['/joinus', '/*','/admin']
-    const isHidden = hiddenRoutes.includes(location.pathname);
+    
+    const hiddenRoutes = ['/joinus', '/*','/admin','/adminsignin']
+    // const isHidden = hiddenRoutes.includes(location.pathname);
+    const isHidden = hiddenRoutes.some(route => location.pathname.startsWith(route));
 
 
   return isHidden ? null : (
