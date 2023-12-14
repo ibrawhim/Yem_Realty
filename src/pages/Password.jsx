@@ -34,7 +34,7 @@ const Password = () => {
 
 const onSubmit = (myData) => {
   if(myData.password == myData.confirm){
-    let form = {...store, ...password}
+    let form = {...store, ...myData}
     dispatch(handleNextStep(form))
   }else {
         setMatch('Password does not match')
