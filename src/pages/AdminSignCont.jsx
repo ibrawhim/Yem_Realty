@@ -57,8 +57,8 @@ const onSubmit = (myData) => {
                     </select>
                     <p className='text-red-600'>{errors.gender?.message}</p>
                     </div>
-                    <button onClick={()=>dispatch(handlePreviousStep())} className=' bg-red-700 text-white rounded p-2 mt-[50%]'>Previous</button>
-                    <button type='submit' className='float-right bg-red-700 text-white rounded p-2 mt-[50%]'>Next</button>
+                    <button onClick={()=>dispatch(handlePreviousStep())} className=' bg-red-700 text-white rounded p-2 mt-[35%]'>Previous</button>
+                    <button type='submit' className='float-right bg-red-700 text-white rounded p-2 mt-[35%]'>Next</button>
                 </form>
         </div>
     </>

@@ -10,6 +10,10 @@ export default {
       ring: {
         default: 'ring-offset-transparent focus:ring-0',
       },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      }
+
     },
   },
   plugins: [

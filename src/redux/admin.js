@@ -16,7 +16,8 @@ const initialData =()=>   {
             localgovernment: '',
             state: '',
             nationality: '',
-            address: '' 
+            address: '',
+            password: '',
         }
     
     }

@@ -9,6 +9,7 @@ import pass3 from '../images/pass3.jpeg'
 import pass4 from '../images/pass4.avif'
 import pass5 from '../images/pass5.jpg'
 import pass6 from '../images/pass6.jpg'
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 const JoinUs = () => {
   return (
@@ -16,6 +17,10 @@ const JoinUs = () => {
         <div>
             <section className='flex w-full justify-between'>
                 <div className='flex flex-col justify-center items-center gap-3 lg:w-1/2 w-full h-screen'>
+                <Link to='/' className='flex mb-10 gap-1'>
+                    <span className='mt-1 hover:animate-bounce'><FaArrowLeftLong /></span>
+                    <span>Back</span>
+                </Link>
                     <img src={ylogo}  width={40} alt="" />
                     <h1 className='text-2xl font-bold'>Get started with Win Realty</h1>
                     <p className='text-xl'>Are you looking to buy or sell a property?</p>

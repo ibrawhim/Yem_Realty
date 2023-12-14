@@ -6,6 +6,7 @@ import AdminSignCont from '../pages/AdminSignCont';
 import Summary from '../pages/Summary';
 import Address from '../pages/Address';
 import Thank from '../pages/Thank';
+import Password from '../pages/Password';
 
 
 const Steppers = ({currentIndex}) => {
@@ -14,6 +15,7 @@ const Steppers = ({currentIndex}) => {
     "Your Info",
     "info contd.",
     "Address",
+    "password",
     "Summary"
 ]
   
@@ -25,7 +27,7 @@ const Steppers = ({currentIndex}) => {
                 <div className='px-4 shadow-xl bg-white'>
                    {
                     steps.map((items,i)=>(
-                      <div key={i} className='flex py-2 lg:w-40 mt-4'>
+                      <div key={i} className='flex py-2 lg:w-40 mt-2'>
                                 <div className={`${currentIndex === i && 'bg-red-700 text-white' } w-[35px] text-center font-bold flex sm justify-center items-center mt-4 border h-[35px] rounded-full lg:me-2 me-0`}>{i + 1}</div>
                                 <div className='hidden lg:block text-center'>
                                 {/* <div className='step1 font-bold text-white'>STEP{i + 1}</div> */}
@@ -39,8 +41,9 @@ const Steppers = ({currentIndex}) => {
                 {currentIndex===0 && <AdminSignUp/>}
                 {currentIndex===1 && <AdminSignCont/>}
                 {currentIndex===2 && <Address/>}
-                {currentIndex===3 && <Summary/>}
-                {currentIndex===4 && <Thank/>}
+                {currentIndex===3 && <Password/>}
+                {currentIndex===4 && <Summary/>}
+                {currentIndex===5 && <Thank/>}
                 </div>
               </div>
             </section>
