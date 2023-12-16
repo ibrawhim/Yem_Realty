@@ -17,6 +17,7 @@ import { useLocation } from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux";
 import './App.css'
 import AdminSignIn from "./pages/AdminSignIn";
+import Contact from "./pages/Contact";
 
 
 function App() {
@@ -67,6 +68,7 @@ function App() {
         <Route path="adminsignup" element={<AdminSignUp/>}/>
         <Route path="adminsignin"  element={<AdminSignIn/>}/>
         <Route path="/admin"  element={<Steppers currentIndex={currentIndex}/>}/>
+        <Route path="/contact"  element={<Contact/>}/>
         {/* <Route path="/card"  element={<Carousel/>}/> */}
       </Routes>
     </div>
