@@ -18,6 +18,7 @@ import { useDispatch, useSelector } from "react-redux";
 import './App.css'
 import AdminSignIn from "./pages/AdminSignIn";
 import Contact from "./pages/Contact";
+import Client from "./pages/Client";
 
 
 function App() {
@@ -69,6 +70,7 @@ function App() {
         <Route path="adminsignin"  element={<AdminSignIn/>}/>
         <Route path="/admin"  element={<Steppers currentIndex={currentIndex}/>}/>
         <Route path="/contact"  element={<Contact/>}/>
+        <Route path="/client/signup"  element={<Client/>}/>
         {/* <Route path="/card"  element={<Carousel/>}/> */}
       </Routes>
     </div>

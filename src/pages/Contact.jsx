@@ -15,7 +15,7 @@ const Contact = () => {
                     <div className=''>
                     <h1 className='font-bold text-2xl'>Contact Us</h1>
                     <p className='mt-3 mb-8'>You can reach out to us using the following means below or sign up to monitor your requests.</p>
-                    <Link className='text-white p-2 rounded font-bold bg-red-500' to=""> Sign Up</Link>
+                    <Link className='text-white p-2 rounded font-bold bg-red-500' to="/client/signup"> Sign Up</Link>
                     </div>
                     <div className='pt-5 mt-10 border-t'>
                         <h1 className='text-xl font-bold'>Contact Information</h1>
