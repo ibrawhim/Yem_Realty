@@ -3,7 +3,7 @@ import logo from '../images/ylogo.png'
 import { IoMdClose } from "react-icons/io";
 import { FaHouse } from "react-icons/fa6";
 import { MdOutlineRealEstateAgent } from "react-icons/md";
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 
 const Upbar = ({onClickHandler}) => {
@@ -38,7 +38,7 @@ const isHidden = hiddenRoutes.includes(location.pathname);
                     <a href="">Send Request</a>
                 </div>
                 <div className='flex justify-center items-center text-white bg-black py-1 rounded my-2'>
-                    <a href="">Join</a>
+                    <Link to="/admin">Join</Link>
                 </div>
             </section>
         </div>

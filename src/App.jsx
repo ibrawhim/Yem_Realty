@@ -65,7 +65,7 @@ function App() {
         <Route path="*"  element={<Error/>}/>
         <Route path='/estates' element={<Estates/>}/>
         <Route path="/joinus"  element={<JoinUs/>}/>
-        <Route path="adminsignup" element={<AdminSignUp/>}/>
+        {/* <Route path="adminsignup" element={<AdminSignUp/>}/> */}
         <Route path="adminsignin"  element={<AdminSignIn/>}/>
         <Route path="/admin"  element={<Steppers currentIndex={currentIndex}/>}/>
         <Route path="/contact"  element={<Contact/>}/>
