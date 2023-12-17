@@ -4,6 +4,8 @@ import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { MdErrorOutline } from "react-icons/md";
 import { Link } from 'react-router-dom';
+import client from '../images/clients.jpg'
+import '../App.css'
 
 
 const Client = () => {
@@ -25,10 +27,13 @@ const onSubmit = (data) => {
   return (
     <>
         <div>
-        <form action="" onSubmit={handleSubmit(onSubmit)}>
+            <section className='flex border-2'>
+                <div className='p-20 lg:w-1/2 md:w-1/2 w-full jaja  overflow-hidden overflow-y-scroll lg:h-[500px]'>
+                    <h1 className='font-bold text-2xl text-center'>Create a Client Account</h1>
+                <form action="" onSubmit={handleSubmit(onSubmit)}>
                     <div className='my-2'>
                          <label className='font-bold' htmlFor="">Full Name</label><br />
-                        <input {...register("Name")} type="text" className={`border border-black h-[30px] rounded w-full mt-3 focus:outline-none`}/>
+                        <input {...register("Name")} type="text" className={`border border-black h-[30px] rounded w-full mt-3 focus:outline-none focus: `}/>
                         <p className='text-red-600'>{errors.Name?.message}</p>
                     </div>
 
@@ -53,12 +58,17 @@ const onSubmit = (data) => {
                     </div>
                     </div>
 
-                    <button type='submit' className=' bg-red-500 text-white py-1 px-3 font-bold rounded'>Next</button>
                 </form>
                 <div className='flex'>
-                    <input type="checkbox" />
+                    <input type="checkbox"  className='mt-1 me-1'/>
                     <p>Creating an account means you agreed with our <Link className='underline text-red-500' to="">Terms of Services</Link> and <Link className='underline text-red-500' to="">Private Policy</Link> Settings</p>
                 </div>
+                    <button type='submit' className=' bg-red-500 w-full text-white py-1 px-3 my-4 font-bold rounded'>Create Account</button>
+                </div>
+                <div className=' hidden lg:block md:block w-1/2  lg:h-[500px] md:h-full'>
+                    <img src={client} alt="" className='w-full h-full'/>
+                </div>
+            </section>
         </div>
     </>
   )

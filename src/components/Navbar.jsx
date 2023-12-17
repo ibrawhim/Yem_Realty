@@ -13,7 +13,7 @@ import { useLocation } from 'react-router-dom'
 const Navbar = ({isSectionVisible }) => {
   const location = useLocation()
   
-  const hiddenRoutes = ['/joinus','/admin','/adminsignin']
+  const hiddenRoutes = ['/joinus','/*','/admin','/adminsignin','/client/signup']
   const isHidden = hiddenRoutes.some(route => location.pathname.startsWith(route));
 
   const [chevronOne, setchevronOne] = useState(false)
