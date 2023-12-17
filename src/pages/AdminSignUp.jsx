@@ -47,23 +47,23 @@ const onSubmit = (data) => {
             <form action="" onSubmit={handleSubmit(onSubmit)}>
                     <div className='my-2'>
                          <label className='font-bold' htmlFor="">First Name</label><br />
-                        <input {...register("Name")} type="text" className={`border border-black h-[30px] rounded w-full mt-3 focus:outline-none`}/>
+                        <input {...register("Name")} type="text" className={`border border-black h-[30px] rounded w-full mt-3 focus:ring-0 focus:border-black`}/>
                         <p className='text-red-600'>{errors.Name?.message}</p>
                     </div>
                     <div className='my-2'>
                          <label className='font-bold' htmlFor="">Last Name</label><br />
-                        <input {...register("Lastname")} type="text" className={`border border-black h-[30px] rounded w-full mt-3 focus:outline-none`}/>
+                        <input {...register("Lastname")} type="text" className={`border border-black h-[30px] rounded w-full mt-3 focus:ring-0 focus:border-black`}/>
                         <p className='text-red-600'>{errors.Lastname?.message}</p>
                     </div>
 
                     <div className='my-2'>
                         <label className='font-bold' htmlFor="">Email Address</label><br />
-                        <input {...register("Email")} type="text" className={`border border-black h-[30px] mt-3 rounded w-full focus:outline-none`}/>
+                        <input {...register("Email")} type="text" className={`border border-black h-[30px] mt-3 rounded w-full focus:ring-0 focus:border-black`}/>
                         <p className='text-red-600'>{errors.Email?.message}</p>
                     </div>
                     <div className='my-2'>
                         <label className='font-bold' htmlFor="">Phone</label><br />
-                        <input {...register("Phone")} type="text" className={`border border-black h-[30px] mt-3 rounded w-full focus:outline-none`} />
+                        <input {...register("Phone")} type="text" className={`border border-black h-[30px] mt-3 rounded w-full focus:ring-0 focus:border-black`} />
                         <p className='text-red-600'>{errors.Phone?.message}</p>
                     </div>
 
