@@ -89,7 +89,7 @@ const onSubmit = (data) => {
 
                 <div className='flex'>
                     <input type="checkbox" onChange={() => setIsCheckboxChecked(!isCheckboxChecked)}  className='mt-1 me-1'/>
-                    <p className='text-justify'>Creating an account means you agreed with our <Link className='underline text-red-500' to="/termsandconditions">Terms of Services and Conditions</Link></p>
+                    <p>Creating an account means you agreed with our <Link className='underline text-red-500' to="/termsandconditions">Terms of Services</Link> and <Link className='underline text-red-500' to="/privacy">Private Policy</Link> Settings</p>
                 </div>
                     <div className='text-red-400 text-center font-bold'>{terms}</div>
                     <button type='submit' className=' bg-red-500 w-full text-white py-1 px-3 my-4 font-bold rounded'>Create Account</button>

@@ -20,6 +20,7 @@ import AdminSignIn from "./pages/AdminSignIn";
 import Contact from "./pages/Contact";
 import Client from "./pages/Client";
 import TermsAndConditionx from "./pages/TermsAndConditionx";
+import Privacy from "./pages/Privacy";
 
 
 function App() {
@@ -74,6 +75,7 @@ function App() {
         <Route path="/contact"  element={<Contact/>}/>
         <Route path="/client/signup"  element={<Client/>}/>
         <Route path="/termsandconditions" element={<TermsAndConditionx/>}/>
+        <Route path="/privacy"  element={<Privacy/>}/>
         {/* <Route path="/card"  element={<Carousel/>}/> */}
       </Routes>
     </div>
