@@ -9,8 +9,9 @@ import { Link, useLocation } from 'react-router-dom'
 const Upbar = ({onClickHandler}) => {
 
 const location = useLocation()
-const hiddenRoutes = ['/joinus']
-const isHidden = hiddenRoutes.includes(location.pathname);
+const hiddenRoutes = []
+
+const isHidden = hiddenRoutes.some(route => location.pathname.startsWith(route));
 
 
   return isHidden ? null : (
