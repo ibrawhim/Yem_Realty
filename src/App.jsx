@@ -68,7 +68,7 @@ function App() {
         <Route path="/joinus"  element={<JoinUs/>}/>
         {/* <Route path="adminsignup" element={<AdminSignUp/>}/> */}
         <Route path="adminsignin"  element={<AdminSignIn/>}/>
-        <Route path="/admin"  element={<Steppers currentIndex={currentIndex}/>}/>
+        <Route path="/admin/signup"  element={<Steppers currentIndex={currentIndex}/>}/>
         <Route path="/contact"  element={<Contact/>}/>
         <Route path="/client/signup"  element={<Client/>}/>
         {/* <Route path="/card"  element={<Carousel/>}/> */}
