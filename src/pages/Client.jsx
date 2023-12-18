@@ -14,6 +14,10 @@ import { BsEyeSlashFill } from "react-icons/bs";
 const Client = () => {
     const [passwordVisible, setPasswordVisible] = useState(false);
     const [confirmVisible, setConfirmVisible] = useState(false);
+    const [wrong, setWrong] = useState(false)
+    const [isCheckboxChecked, setIsCheckboxChecked] = useState(false)
+    const [terms, setTerms] = useState('')
+
 
     const togglePasswordVisibility = (field) => {
         if (field === 'password') {
@@ -37,9 +41,17 @@ const { register, handleSubmit, setValue, formState: { errors }, } = useForm({
     resolver: yupResolver(Schema)
 })
 const onSubmit = (data) => {
-    console.log(data);
-  }
-  return (
+    if(isCheckboxChecked==true) {
+        if (data.password===data.confirm){
+            console.log(data);
+        }else  {
+            setWrong(true)
+        }
+    }else {
+        setTerms('Accept Terms and Policy!!!')
+    }
+    }
+    return (
     <>
         <div>
             <section className='flex border-2 sm:shadow'>
@@ -71,14 +83,15 @@ const onSubmit = (data) => {
                          <label className='font-bold' htmlFor="">confirm</label><br />
                         <input {...register("confirm")}  type={confirmVisible ? 'text' : 'password'} className={`border border-black h-[30px] rounded w-full mt-3 focus:ring-0 focus:border-black caret-red-700`}/>
                         <span onClick={() => togglePasswordVisibility('confirm')} className='absolute top-[40px] right-1'>{!confirmVisible ? <BsEyeSlashFill /> : <IoEyeSharp />}</span>
-                        <p className='text-red-600'>{errors.confirm?.message}</p>
+                        <p className='text-red-600'>{wrong==true ? 'Password do not match' : errors.confirm?.message}</p>
                     </div>
                     </div>
 
                 <div className='flex'>
-                    <input type="checkbox"  className='mt-1 me-1'/>
-                    <p>Creating an account means you agreed with our <Link className='underline text-red-500' to="">Terms of Services</Link> and <Link className='underline text-red-500' to="">Private Policy</Link> Settings</p>
+                    <input type="checkbox" onChange={() => setIsCheckboxChecked(!isCheckboxChecked)}  className='mt-1 me-1'/>
+                    <p className='text-justify'>Creating an account means you agreed with our <Link className='underline text-red-500' to="/termsandconditions">Terms of Services and Conditions</Link></p>
                 </div>
+                    <div className='text-red-400 text-center font-bold'>{terms}</div>
                     <button type='submit' className=' bg-red-500 w-full text-white py-1 px-3 my-4 font-bold rounded'>Create Account</button>
                 </form>
                 </div>
