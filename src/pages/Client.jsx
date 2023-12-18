@@ -12,16 +12,17 @@ import { BsEyeSlashFill } from "react-icons/bs";
 
 
 const Client = () => {
-    const [eyes, setEyes] = useState(false)
+    const [passwordVisible, setPasswordVisible] = useState(false);
+    const [confirmVisible, setConfirmVisible] = useState(false);
 
-
-    const firstEyes = () => {
-        if (eyes==false){
-            setEyes(true)
-        }else {
-            setEyes(false)
+    const togglePasswordVisibility = (field) => {
+        if (field === 'password') {
+            setPasswordVisible(!passwordVisible);
+        } else if (field === 'confirm') {
+            setConfirmVisible(!confirmVisible);
         }
-    }
+    };
+
 
 const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/
 const passReg = /^(?=.*[0-9])(?=.*[a-zA-Z]).{8,}$/
@@ -62,14 +63,14 @@ const onSubmit = (data) => {
                         <p className='text-red-600'>{errors.Phone?.message}</p>
                     <div className='my-2 relative'>
                          <label className='font-bold' htmlFor="">Password</label><br />
-                        <input {...register("password")}  type={!eyes?'password':'text'} className={`border border-black h-[30px] rounded w-full mt-3 focus:ring-0 focus:border-black caret-red-700`}/>
-                        <span onClick={firstEyes} className='absolute top-[40px] right-1'>{!eyes?<BsEyeSlashFill />:<IoEyeSharp />}</span>
+                        <input {...register("password")}  type={passwordVisible ? 'text' : 'password'} className={`border border-black h-[30px] rounded w-full mt-3 focus:ring-0 focus:border-black caret-red-700`}/>
+                        <span onClick={() => togglePasswordVisibility('password')} className='absolute top-[40px] right-1'>{!passwordVisible ? <BsEyeSlashFill /> : <IoEyeSharp />}</span>
                         <p className='text-red-600'>{errors.password?.message}</p>
                     </div>
                     <div className='my-2 relative'>
                          <label className='font-bold' htmlFor="">confirm</label><br />
-                        <input {...register("confirm")}  type={!eyes?'password':'text'} className={`border border-black h-[30px] rounded w-full mt-3 focus:ring-0 focus:border-black caret-red-700`}/>
-                        <span onClick={firstEyes} className='absolute top-[40px] right-1'>{!eyes?<BsEyeSlashFill />:<IoEyeSharp />}</span>
+                        <input {...register("confirm")}  type={confirmVisible ? 'text' : 'password'} className={`border border-black h-[30px] rounded w-full mt-3 focus:ring-0 focus:border-black caret-red-700`}/>
+                        <span onClick={() => togglePasswordVisibility('confirm')} className='absolute top-[40px] right-1'>{!confirmVisible ? <BsEyeSlashFill /> : <IoEyeSharp />}</span>
                         <p className='text-red-600'>{errors.confirm?.message}</p>
                     </div>
                     </div>

@@ -39,7 +39,7 @@ const isHidden = hiddenRoutes.some(route => location.pathname.startsWith(route))
                     <a href="">Send Request</a>
                 </div>
                 <div className='flex justify-center items-center text-white bg-black py-1 rounded my-2'>
-                    <Link to="/admin">Join</Link>
+                    <Link to="/joinus">Join</Link>
                 </div>
             </section>
         </div>
