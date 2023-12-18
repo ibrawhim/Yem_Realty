@@ -17,7 +17,7 @@ const JoinUs = () => {
         <div>
             <section className='flex w-full justify-between'>
                 <div className='flex flex-col justify-center items-center gap-3 lg:w-1/2 w-full h-screen'>
-                <Link to='/' className='flex mb-10 gap-1'>
+                <Link to='/' className='flex gap-1'>
                     <span className='mt-1 hover:animate-bounce'><FaArrowLeftLong /></span>
                     <span>Back</span>
                 </Link>
