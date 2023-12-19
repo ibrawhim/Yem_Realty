@@ -4,9 +4,9 @@ input:focus {
 p {
     text-align: justify;
 }
-h1 {
+/* h1 {
     width: fit-content;
-}
+} */
 .tandc::after {
     position: absolute;
     content: "";
