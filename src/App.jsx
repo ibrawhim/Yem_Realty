@@ -21,6 +21,7 @@ import Contact from "./pages/Contact";
 import Client from "./pages/Client";
 import TermsAndConditionx from "./pages/TermsAndConditionx";
 import Privacy from "./pages/Privacy";
+import About from "./pages/About";
 
 
 function App() {
@@ -76,6 +77,7 @@ function App() {
         <Route path="/client/signup"  element={<Client/>}/>
         <Route path="/termsandconditions" element={<TermsAndConditionx/>}/>
         <Route path="/privacy"  element={<Privacy/>}/>
+        <Route path="/about" element={<About/>}/>
         {/* <Route path="/card"  element={<Carousel/>}/> */}
       </Routes>
     </div>

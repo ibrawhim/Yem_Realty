@@ -50,7 +50,7 @@ const TermsAndConditionx = () => {
               <p> These terms and conditions are governed by and construed in accordance with the laws of [jurisdiction], and you submit to the exclusive jurisdiction of the courts located within [jurisdiction] for the resolution of any disputes.</p>
             </div>
 
-            <p>Last Updated: December 20, 2023</p>
+            <p className='my-4 text-red-400'>Last Updated: December 20, 2023</p>
 
           
 
