@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import nupo from '../images/nupo.jpg'
 import iyin from '../images/iyin.jpg'
 import nup from '../images/temi.jpg'
@@ -41,7 +41,10 @@ import { Link } from 'react-router-dom'
 
 
 const Landing = () => {
-
+  useEffect(() => {
+    document.title = 'Yem Realty | The #1 Real Estates Company in Nigeria'
+  }, [])
+  
   let myStyle = {
     background: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))'
   }

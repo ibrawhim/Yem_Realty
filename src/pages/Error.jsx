@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import erro from '../images/erro.png'
 import { FaHome } from "react-icons/fa";
 import {Link} from 'react-router-dom'
 
 
+
 const Error = () => {
+  useEffect(() => {
+    document.title = 'Error Page | Yem Realty'
+  }, [])
+  
 
   return (
     <>

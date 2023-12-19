@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from "react-router-dom"
+import { Link, Navigate, Route, Routes } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import { useState } from "react"
 import { FaBars } from "react-icons/fa";
@@ -24,6 +24,7 @@ import Privacy from "./pages/Privacy";
 import About from "./pages/About";
 
 
+
 function App() {
   const currentIndex = useSelector((state) => state.adminReducer.adminSign.currentStep)
   // console.log(currentIndex);
@@ -33,7 +34,7 @@ function App() {
 
   const location = useLocation()
   // const [isOpen, setIsOpen] = useState(false);
-  const hiddenRoutes = ['/joinus','/admin','/client/signup']
+  const hiddenRoutes = ['/joinus','/admin','/client/signup','*/']
   // const isHidden = hiddenRoutes.includes(location.pathname);
   const isHidden = hiddenRoutes.some(route => location.pathname.startsWith(route));
   
@@ -56,7 +57,7 @@ function App() {
     <Navbar isSectionVisible={isSectionVisible}/>
     <div className={isOpen?'block fixed w-full': 'hidden'}><Upbar onClickHandler={handleClick} /></div>
     {isHidden ? null :<ul className='md:hidden shadow px-5 flex justify-between '>
-          <li><img src={logo} width={40} className='h-[40px] my-2' alt="" /></li>
+          <li><Link to="/"><img src={logo} width={40} className='h-[40px] my-2' alt="" /></Link></li>
           <li className='text-black my-6'>
               <FaBars onClick={toggleIsOpen}/>
           </li>

@@ -8,7 +8,7 @@ const Footer = () => {
 
     const location = useLocation()
     
-    const hiddenRoutes = ['/joinus', '/*','/admin','/adminsignin','/client/signup']
+    const hiddenRoutes = ['/joinus', '/*','/admin','/adminsignin','/client/signup',]
     // const isHidden = hiddenRoutes.includes(location.pathname);
     const isHidden = hiddenRoutes.some(route => location.pathname.startsWith(route));
 

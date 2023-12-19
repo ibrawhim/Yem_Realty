@@ -18,7 +18,9 @@ const isHidden = hiddenRoutes.some(route => location.pathname.startsWith(route))
     <>
         <div className={!onClickHandler? 'hidden': ' fixed w-screen md:hidden bg-white p-5 rounded'} style={{zIndex: '2'}}>
             <div className='flex justify-between'>
-                <img className='' src={logo} width={35} alt="Yem realty logo"/>
+                <Link to="/">
+                    <img className='' src={logo} width={35} alt="Yem realty logo"/>
+                </Link>
                 <span className='text-3xl m-2' onClick={onClickHandler}><IoMdClose /></span>
                 {/* <button></button> */}
             </div>
