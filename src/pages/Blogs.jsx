@@ -13,7 +13,7 @@ const Blogs = () => {
                     blogList.map((items,index)=>(
                         <div key={index} className='border-2 overflow-hidden border-red-400'>
                             <img src={items.img} className='h-1/2 w-full' alt="" />
-                            <div>{items.headline}</div>
+                            <div className='font-bold my-1'>{items.headline}</div>
                             <div>{items.paragraph}</div>
                         </div>
                     ))

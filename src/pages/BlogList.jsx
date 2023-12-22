@@ -9,22 +9,22 @@ export const blogList = [
     {
         img: new1,
         headline: 'The Ultimate Guide to Buying Real Estate',
-        paragraph: 'In todays ever-changing market, purchasing real estate remains a solid investment choice. Whether you seek a dream home or a profitable asset, here is a concise guide to navigating the process'
+        paragraph: 'In todays ever-changing market, purchasing real estate remains a solid investment choice. Whether...'
     },
     {
         img: new2,
         headline: '4 Sure Ways To Invest In Real Estate Even If You Don’t Have Millions',
-        paragraph: 'The idea of only the rich owning lands and properties is false. You too can own lands and properties without millions and here are a few reasons why and how'
+        paragraph: 'The idea of only the rich owning lands and properties is false. You too can own lands and properties without...'
     },
     {
         img: new3,
         headline: 'Industrial real estate offers hope with 12% annual yield',
-        paragraph: 'The Nigerian industrial sub sector of the real estate sector has offered green flag to yield-hungry investors with 12 percent annual yield, which places it ahead of other sub-sectors including residential, commercial office and retail.'
+        paragraph: 'The Nigerian industrial sub sector of the real estate sector has offered green flag to yield-hungry...'
     },
     {
         img: new5,
         headline: '2022 Outlook: Experts Optimistic, Predict 2.9% Real estate growth',
-        paragraph: 'Notwithstanding heightened uncertainty and affordability challenges, experts are optimistic of improvement in the sector this year.'
+        paragraph: 'Notwithstanding heightened uncertainty and affordability challenges, experts are optimistic of improvement...'
     },
     {
         img: new6,
