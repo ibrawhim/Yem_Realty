@@ -22,6 +22,7 @@ import Client from "./pages/Client";
 import TermsAndConditionx from "./pages/TermsAndConditionx";
 import Privacy from "./pages/Privacy";
 import About from "./pages/About";
+import Blogs from "./pages/Blogs";
 
 
 
@@ -79,6 +80,7 @@ function App() {
         <Route path="/termsandconditions" element={<TermsAndConditionx/>}/>
         <Route path="/privacy"  element={<Privacy/>}/>
         <Route path="/about" element={<About/>}/>
+        <Route path="/blog" element={<Blogs/>}/>
         {/* <Route path="/card"  element={<Carousel/>}/> */}
       </Routes>
     </div>

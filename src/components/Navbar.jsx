@@ -61,7 +61,7 @@ const Navbar = ({isSectionVisible }) => {
                       {/* <button  onClick={upOne} className={chevronOne==false? 'hidden':  '' }><IoChevronUp /></button> */}
                     </p>
                 </div>
-                <div>About</div>
+                <div className='cursor-pointer'>About</div>
                 <div>Contact</div>
                 <div>Blog</div>
                 <div className='flex gap-2'>

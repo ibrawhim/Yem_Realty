@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+    import React, { useEffect, useState } from 'react'
 import about from '../images/about.jpg'
 import { IoHomeSharp } from "react-icons/io5";
 import { BsPeopleFill } from "react-icons/bs";
@@ -15,6 +15,9 @@ import svg1 from '../images/svg.svg'
 import svg2 from '../images/svg2.svg'
 import svg3 from '../images/svg3.svg'
 import svg4 from '../images/svg4.svg'
+import { FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft } from "react-icons/fa";
+
 
 
 const About = () => {
@@ -22,16 +25,43 @@ const About = () => {
       document.title = 'About Us | Yem Realty'
     }, [])
 
-    const Testimony = [
+    const myTestimony = [
         {
         name: 'Mr Kay B.T',
-        testimony: 'Win Realty exceeded all my expectations, They took the time to understand my goals and preferences, and their in-depth knowledge of the market led me to an opportunity I wouldnt have found on my own',
+        testimony: 'Yem Realty exceeded all my expectations, They took the time to understand my goals and preferences, and their in-depth knowledge of the market led me to an opportunity I would not have found on my own',
         img: svg1
-        }
-        
-
+        },
+        {
+         name: 'Mrs Debrah ',
+         testimony: 'Yem Realty is not just a real estate company; they are partners in your real estate journey. Their commitment to delivering outstanding results is truly exceptional. If you are looking for a real estate partner you can trust, Win Realty is the way to go',
+         img: svg2
+        },
+        {
+         name: 'Mr James Oladayo',
+         testimony: 'I have had the pleasure of working with Yem Realty on multiple real estate transactions, and they have consistently demonstrated professionalism, expertise, and a genuine commitment to their client success,',
+         img: svg3
+        },
+        {
+        name: 'Miss Bimbo',
+        testimony: 'Working with Yem Realty has been a game-changer for me. As a first-time land buyer, I was filled with doubts and uncertainties. But from the moment I connected with their team, I felt supported and informed every step of the way',
+        img: svg4
+        },
     ]
     
+    const [currentIndex, setCurrentIndex] = useState(0)
+    
+
+
+    const showPrevious = () => {
+        setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : myTestimony.length - 1));
+      };
+    
+      const showNext = () => {
+        setCurrentIndex((prevIndex) => (prevIndex < myTestimony.length - 1 ? prevIndex + 1 : 0));
+      };
+    
+    
+
   return (
     <>
         <div className='mx-10 my-10'>
@@ -85,9 +115,28 @@ const About = () => {
               </div>
             </section>
             </section>
-            <section>
+            <section className='mx-20'>
                 <h1 className='text-center font-bold text-2xl'>Testimonials</h1>
-                <p className='mx-auto text-justify'>Some people trust us enough to patronzize our business and for that we think they deserve some honourable mentions.</p>
+                <p className='mx-auto mb-10 mt-2 text-center'>Some people trust us enough to patronzize our business and for that we think they deserve some honourable mentions.</p>
+                {
+                    myTestimony.map((items, index)=>(
+                        <div key={index} style={{display: index===currentIndex? 'block grid' : 'none'}} className='lg:grid-cols-2 md:grid-cols-2 grid-cols-1' >
+                            <div className=' flex justify-center items-center flex-col'>
+                            <div className='text-justify'>{items.testimony}</div>
+                            <div className='font-bold text-xl my-2'>{items.name}</div>
+                            <div className='mb-2'>
+                            <button className='bg-black text-white me-2 p-1 rounded' onClick={showPrevious}><FaChevronLeft /></button>
+                            <button className='bg-black text-white p-1 rounded' onClick={showNext}><FaChevronRight /></button>
+                            </div>
+                            </div>
+                            <div className='  flex justify-center items-center'>
+                            <img src={items.img}  className='w-[250px]' alt="" />
+                            </div>
+                        </div>
+                    ))
+                }
+
+
             </section>
         </div>
     </>
