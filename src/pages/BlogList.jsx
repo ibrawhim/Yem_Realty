@@ -29,7 +29,7 @@ export const blogList = [
     {
         img: new6,
         headline: '5 Reasons Ibadan is a Great Investment Destination',
-        paragraph: 'The city of Ibadan is one of the fastest growing cities in Africa and the Global South. With economic growth and rising standards of living, other African cities are beginning to follow in Ibadan’s footsteps. As the capital city of Oyo State, Ibadan is one of the most important cities in Nigeria. ​'
+        paragraph: 'The city of Ibadan is one of the fastest growing cities in Africa and the Global South. ​'
     },
     {
         img: new4,
