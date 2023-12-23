@@ -15,7 +15,8 @@ export const blogList = [
     {
         img: new2,
         headline: '4 Sure Ways To Invest In Real Estate Even If You Don’t Have Millions',
-        paragraph: 'The idea of only the rich owning lands and properties is false. You too can own lands and properties without...'
+        paragraph: 'The idea of only the rich owning lands and properties is false. You too can own lands and properties without...',
+        li: '/blog/4-sure-ways-to-invest-in-real-estate-even-if-you-don’t-have-millions'
     },
     {
         img: new3,

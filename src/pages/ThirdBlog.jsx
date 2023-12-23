@@ -1,15 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { CiCalendarDate } from "react-icons/ci";
 import img1 from '../images/new1.jpg'
 import Related from './Related';
 
 
-const FirstBlog = () => {
-
-        useEffect(() => {
-          document.title = 'The Ultimate Guide to Buying Real Estate'
-        }, [])
-        
+const ThirdBlog = () => {
   return (
     <>
         <div className='lg:mx-60 md:mx-20 mx-14 my-20'>
@@ -60,4 +55,4 @@ const FirstBlog = () => {
   )
 }
 
-export default FirstBlog
+export default ThirdBlog
