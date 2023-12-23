@@ -25,6 +25,7 @@ import About from "./pages/About";
 import Blogs from "./pages/Blogs";
 import FirstBlog from "./pages/FirstBlog";
 import SecondBlog from "./pages/SecondBlog";
+import ThirdBlog from "./pages/ThirdBlog";
 
 
 
@@ -85,6 +86,7 @@ function App() {
         <Route path="/blog" element={<Blogs/>}/>
         <Route path="/blog/The-Ultimate-Guide-to-Buying-Real-Estate" element={<FirstBlog/>}/>
         <Route path="/blog/4-sure-ways-to-invest-in-real-estate-even-if-you-don’t-have-millions"   element={<SecondBlog/>}/>
+        <Route path="/blog/industrial-real-estate-offers-hope-with-12-annual-yield" element={<ThirdBlog/>}/>
         {/* <Route path="/card"  element={<Carousel/>}/> */}
       </Routes>
     </div>

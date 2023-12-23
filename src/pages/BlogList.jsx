@@ -21,7 +21,8 @@ export const blogList = [
     {
         img: new3,
         headline: 'Industrial real estate offers hope with 12% annual yield',
-        paragraph: 'The Nigerian industrial sub sector of the real estate sector has offered green flag to yield-hungry...'
+        paragraph: 'The Nigerian industrial sub sector of the real estate sector has offered green flag to yield-hungry...',
+        li: 'industrial-real-estate-offers-hope-with-12-annual-yield'
     },
     {
         img: new5,
