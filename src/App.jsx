@@ -23,6 +23,7 @@ import TermsAndConditionx from "./pages/TermsAndConditionx";
 import Privacy from "./pages/Privacy";
 import About from "./pages/About";
 import Blogs from "./pages/Blogs";
+import FirstBlog from "./pages/FirstBlog";
 
 
 
@@ -81,6 +82,7 @@ function App() {
         <Route path="/privacy"  element={<Privacy/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/blog" element={<Blogs/>}/>
+        <Route path="/blog/The-Ultimate-Guide-to-Buying-Real-Estate" element={<FirstBlog/>}/>
         {/* <Route path="/card"  element={<Carousel/>}/> */}
       </Routes>
     </div>

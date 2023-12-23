@@ -9,7 +9,8 @@ export const blogList = [
     {
         img: new1,
         headline: 'The Ultimate Guide to Buying Real Estate',
-        paragraph: 'In todays ever-changing market, purchasing real estate remains a solid investment choice. Whether...'
+        paragraph: 'In todays ever-changing market, purchasing real estate remains a solid investment choice. Whether...',
+        li: '/blog/The-Ultimate-Guide-to-Buying-Real-Estate'
     },
     {
         img: new2,
