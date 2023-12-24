@@ -29,6 +29,7 @@ import ThirdBlog from "./pages/ThirdBlog";
 import FourthBlog from "./pages/FourthBlog";
 import FifthBlog from "./pages/FifthBlog";
 import SixthBlog from "./pages/SixthBlog";
+import Help from "./pages/Help";
 
 
 
@@ -93,6 +94,7 @@ function App() {
         <Route path="/blog/2022-outlook:-experts-optimistic,-predict-29-real-estate-growth"  element={<FourthBlog/>}/>
         <Route path="/blog/5-reasons-Ibadan-is-a-great-investment-destination" element={<FifthBlog/>}/>
         <Route path="/blog/use-these-5-ways-to-invest-in-real-estate-properly"  element={<SixthBlog/>}/>
+        <Route path="/help" element={<Help/>}/>
         {/* <Route path="/card"  element={<Carousel/>}/> */}
       </Routes>
     </div>

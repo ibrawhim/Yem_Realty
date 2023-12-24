@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom'
 
 
+
 const Navbar = ({isSectionVisible }) => {
   const location = useLocation()
   
@@ -19,12 +20,6 @@ const Navbar = ({isSectionVisible }) => {
   const [chevronOne, setchevronOne] = useState(false)
   const [chevronTwo, setchevronTwo] = useState(false)
   
-  // useEffect(() => {
-  //   // Reset chevronOne and chevronTwo when isSectionVisible changes
-  //   setchevronOne(false);
-  //   setchevronTwo(false);
-  // }, [isSectionVisible]);
-
  
   const downOne = () => {
     if(chevronOne==false){
@@ -43,11 +38,18 @@ const Navbar = ({isSectionVisible }) => {
     }
   }
   
+  useEffect(() => {
+    // Reset chevronOne and chevronTwo when isSectionVisible becomes true
+    if (isSectionVisible) {
+      setchevronOne(false);
+      setchevronTwo(false);
+    }
+  }, [isSectionVisible]);
 
   
   return isHidden ? null : (
     <>
-    <div className='hidden sticky z-[1000000] top-0 md:block bg-white'>
+    <div className='border2  hidden sticky z-[1000000] top-0 md:block bg-white'>
         <nav className='flex justify-between px-5 md:px-20 border w-full shadow'>
           <Link to='/' className='flex my-4'>
             <img src={logo} width={40} className='h-[40px]' alt="" />
@@ -61,9 +63,9 @@ const Navbar = ({isSectionVisible }) => {
                       {/* <button  onClick={upOne} className={chevronOne==false? 'hidden':  '' }><IoChevronUp /></button> */}
                     </p>
                 </div>
-                <div className='cursor-pointer'>About</div>
-                <div>Contact</div>
-                <div>Blog</div>
+                <Link to='/about' className='cursor-pointer'>About</Link>
+                <Link to='/contact'>Contact</Link>
+                <Link to='/blog'>Blog</Link>
                 <div className='flex gap-2'>
                     <p>More</p>
                     <p className='mt-[3px]'>
