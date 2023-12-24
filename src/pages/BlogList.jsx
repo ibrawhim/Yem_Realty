@@ -33,11 +33,13 @@ export const blogList = [
     {
         img: new6,
         headline: '5 Reasons Ibadan is a Great Investment Destination',
-        paragraph: 'The city of Ibadan is one of the fastest growing cities in Africa and the Global South. ​'
+        paragraph: 'The city of Ibadan is one of the fastest growing cities in Africa and the Global South. ​',
+        li: '/blog/5-reasons-Ibadan-is-a-great-investment-destination'
     },
     {
         img: new4,
         headline: 'Use These 5 Ways to Invest in Real Estate Properly',
-        paragraph: 'A lot of people are yet to realize that Real Estate is the future of investments and here’s why;'
+        paragraph: 'A lot of people are yet to realize that Real Estate is the future of investments and here’s why;',
+        li: '/blog/use-these-5-ways-to-invest-in-real-estate-properly'
     }
 ]
