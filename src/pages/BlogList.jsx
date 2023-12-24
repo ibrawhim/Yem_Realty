@@ -22,12 +22,13 @@ export const blogList = [
         img: new3,
         headline: 'Industrial real estate offers hope with 12% annual yield',
         paragraph: 'The Nigerian industrial sub sector of the real estate sector has offered green flag to yield-hungry...',
-        li: 'industrial-real-estate-offers-hope-with-12-annual-yield'
+        li: '/blog/industrial-real-estate-offers-hope-with-12-annual-yield'
     },
     {
         img: new5,
         headline: '2022 Outlook: Experts Optimistic, Predict 2.9% Real estate growth',
-        paragraph: 'Notwithstanding heightened uncertainty and affordability challenges, experts are optimistic of improvement...'
+        paragraph: 'Notwithstanding heightened uncertainty and affordability challenges, experts are optimistic of improvement...',
+        li: '/blog/2022-outlook:-experts-optimistic,-predict-29-real-estate-growth'
     },
     {
         img: new6,

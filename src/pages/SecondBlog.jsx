@@ -10,7 +10,7 @@ const SecondBlog = () => {
       }, [])
   return (
     <>
-                <div className='lg:mx-60 md:mx-20 mx-14 my-20'>
+            <div className='lg:mx-60 md:mx-20 mx-14 my-20'>
             <p className='flex'>
             <span className='mt-1'><CiCalendarDate /></span>
             <span>Dec 22, 2023</span>
