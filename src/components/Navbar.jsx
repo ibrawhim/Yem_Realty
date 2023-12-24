@@ -97,7 +97,7 @@ const Navbar = ({isSectionVisible }) => {
           <div className='flex  flex-col'>
           <div className='flex gap-3 mb-5 hover:bg-gray-100 p-1 rounded'>
             <p className='text-red-500 mt-1'><TbHelpHexagon /></p>
-            <p>Help Center</p>
+            <Link to='/help'>Help Center</Link>
           </div>
           <div className='flex gap-3 hover:bg-gray-100 p-1 rounded'>
             <p className='text-red-500 mt-1'><VscGitPullRequestNewChanges /></p>
