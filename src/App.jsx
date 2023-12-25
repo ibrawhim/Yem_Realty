@@ -31,6 +31,7 @@ import FifthBlog from "./pages/FifthBlog";
 import SixthBlog from "./pages/SixthBlog";
 import Help from "./pages/Help";
 import Request from "./pages/Request";
+import ClientSignIn from "./pages/ClientSignIn";
 
 
 
@@ -97,6 +98,7 @@ function App() {
         <Route path="/blog/use-these-5-ways-to-invest-in-real-estate-properly"  element={<SixthBlog/>}/>
         <Route path="/help" element={<Help/>}/>
         <Route path="/request" element={<Request/>}/>
+        <Route path="/clientsignin"  element={<ClientSignIn/>}/>
         {/* <Route path="/card"  element={<Carousel/>}/> */}
       </Routes>
     </div>
