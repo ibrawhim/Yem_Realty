@@ -64,6 +64,7 @@ function App() {
 
   return (
     <>
+    <div className="font-[Quicksand] lg:mx-0 sm:mx-0 " onClick={handleBodyClick}>
     <Navbar isSectionVisible={isSectionVisible}/>
     <div className={isOpen?'block fixed w-full': 'hidden'}><Upbar onClickHandler={handleClick} /></div>
     {isHidden ? null :<ul className='md:hidden shadow px-5 flex justify-between '>
@@ -72,7 +73,6 @@ function App() {
               <FaBars onClick={toggleIsOpen}/>
           </li>
       </ul>}
-    <div className="font-[Quicksand] lg:mx-0 sm:mx-0" onClick={handleBodyClick}>
     {/* <div><Upbar/></div> */}
       <Routes>
         <Route path="/"  element={<Landing/>}/>

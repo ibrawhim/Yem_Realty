@@ -20,9 +20,9 @@ const ClientSignIn = () => {
     })
   return (
     <>
-        <div className='bg-red-400 h-screen'>
+        <div className=' h-screen py-20'>
         <section className=''>
-            <div className='flex justify-center items-center my-20'>
+            <div className='flex justify-center items-center'>
                 <form action="" onSubmit={formik.handleSubmit} className='flex flex-col w-96  p-6 shadow'>
                 <h1 className=''>SIGN IN</h1>
                     <input type="text" placeholder='name@mail.com' className={formik.touched.email && formik.errors.email ? 'border-2 p-2 caret-red-400 rounded border-red-500 focus:outline-none': 'border-2 p-2 focus:outline-none caret-cyan-400 rounded border-cyan-800 my-2'} name='email' onChange={formik.handleChange} onBlur={formik.handleBlur}/>

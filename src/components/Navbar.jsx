@@ -49,7 +49,7 @@ const Navbar = ({isSectionVisible }) => {
   
   return isHidden ? null : (
     <>
-    <div className='border2  hidden sticky z-[1000000] top-0 md:block bg-white'>
+    <div className=' hidden sticky z-[1000000] md:block bg-white'>
         <nav className='flex justify-between px-5 md:px-20 border w-full shadow'>
           <Link to='/' className='flex my-4'>
             <img src={logo} width={40} className='h-[40px]' alt="" />
