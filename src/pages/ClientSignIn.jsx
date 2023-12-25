@@ -20,7 +20,7 @@ const ClientSignIn = () => {
     })
   return (
     <>
-        <div className=''>
+        <div className='bg-red-400 h-screen'>
         <section className=''>
             <div className='flex justify-center items-center my-20'>
                 <form action="" onSubmit={formik.handleSubmit} className='flex flex-col w-96  p-6 shadow'>
