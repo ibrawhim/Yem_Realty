@@ -30,6 +30,7 @@ import FourthBlog from "./pages/FourthBlog";
 import FifthBlog from "./pages/FifthBlog";
 import SixthBlog from "./pages/SixthBlog";
 import Help from "./pages/Help";
+import Request from "./pages/Request";
 
 
 
@@ -95,6 +96,7 @@ function App() {
         <Route path="/blog/5-reasons-Ibadan-is-a-great-investment-destination" element={<FifthBlog/>}/>
         <Route path="/blog/use-these-5-ways-to-invest-in-real-estate-properly"  element={<SixthBlog/>}/>
         <Route path="/help" element={<Help/>}/>
+        <Route path="/request" element={<Request/>}/>
         {/* <Route path="/card"  element={<Carousel/>}/> */}
       </Routes>
     </div>

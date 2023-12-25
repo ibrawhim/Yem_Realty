@@ -101,7 +101,7 @@ const Navbar = ({isSectionVisible }) => {
           </div>
           <div className='flex gap-3 hover:bg-gray-100 p-1 rounded'>
             <p className='text-red-500 mt-1'><VscGitPullRequestNewChanges /></p>
-            <p>Send Request</p>
+            <Link to='/request'>Send Request</Link>
           </div>
           </div>
         </section>
