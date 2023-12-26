@@ -5,9 +5,13 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { MdErrorOutline } from 'react-icons/md';
+import axios from 'axios';
+
 
 const Password = () => {
   const [match, setMatch] = useState('');
+  const endpoint = 'http://localhost:4232/signup/'
+  
 
   let dispatch = useDispatch();
   const store = useSelector((state) => state.adminReducer.adminSign);
@@ -50,6 +54,14 @@ const Password = () => {
       // Only store the password in the form data
       let form = { password: myData.password };
       dispatch(handleNextStep(form));
+      console.log(store);
+      axios.post(endpoint,store)
+      .then((result)=>{
+        console.log(result);
+      })
+      .catch((error)=>{
+        console.log(error);
+      })
     } else {
       setMatch('Password do not match');
     }

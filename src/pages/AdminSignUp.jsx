@@ -5,11 +5,14 @@ import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { MdErrorOutline } from "react-icons/md";
+import axios from 'axios'
+
 
 
 const AdminSignUp = () => {
   let dispatch = useDispatch()
   const store = useSelector((state)=> state.adminReducer.adminSign)
+  
   // console.log(store);
 
   useEffect(() => {
@@ -35,8 +38,8 @@ const AdminSignUp = () => {
 
 const onSubmit = (data) => {
   let form = {...store, ...data}
-  // console.log(form);
   dispatch(handleNextStep(form))
+  // console.log(form);
 }
 
   
