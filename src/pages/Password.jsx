@@ -10,6 +10,7 @@ import axios from 'axios';
 
 const Password = () => {
   const [match, setMatch] = useState('');
+  const [exist, setExist] = useState(false)
   const endpoint = 'http://localhost:4232/signup/'
   
 
@@ -57,8 +58,10 @@ const Password = () => {
       .then((result)=>{
         if(result.data.status==true){
           dispatch(handleNextStep(form));
+        }else if(result.data.status==false && result.data.err.code==11000){
+          console.log(result);
+          setExist(true)
         }
-        console.log(result);
       })
       .catch((error)=>{
         console.log(error);
@@ -95,7 +98,8 @@ const Password = () => {
               className={`border border-black h-[40px] mt-3 rounded w-full`}
             />
             <p className="text-red-600">{errors.confirm?.message}</p>
-            <p className="text-red-600">{match}</p>
+            <p className="text-red-600 my-1">{exist?'Email Already Exists, Kindly go back to Previous Pages' : match}</p>
+          <small>{exist}</small>
           </div>
           <button
             onClick={() => dispatch(handlePreviousStep())}
