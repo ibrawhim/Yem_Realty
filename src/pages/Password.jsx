@@ -53,10 +53,11 @@ const Password = () => {
     if (myData.password === myData.confirm) {
       // Only store the password in the form data
       let form = { password: myData.password };
-      dispatch(handleNextStep(form));
-      console.log(store);
       axios.post(endpoint,store)
       .then((result)=>{
+        if(result.data.status==true){
+          dispatch(handleNextStep(form));
+        }
         console.log(result);
       })
       .catch((error)=>{
