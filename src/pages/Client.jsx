@@ -8,6 +8,8 @@ import client from '../images/clients.jpg'
 import '../App.css'
 import { IoEyeSharp } from "react-icons/io5";
 import { BsEyeSlashFill } from "react-icons/bs";
+import axios from 'axios';
+
 
 
 
@@ -18,6 +20,7 @@ const Client = () => {
     const [isCheckboxChecked, setIsCheckboxChecked] = useState(false)
     const [terms, setTerms] = useState('')
 
+    let endpoint = 'http://localhost:4232/client/signup/'
 
     const togglePasswordVisibility = (field) => {
         if (field === 'password') {
@@ -43,7 +46,14 @@ const { register, handleSubmit, setValue, formState: { errors }, } = useForm({
 const onSubmit = (data) => {
     if(isCheckboxChecked==true) {
         if (data.password===data.confirm){
-            console.log(data);
+            console.log(data)
+            axios.post(endpoint, data)
+            .then((result)=>{
+                console.log(result);
+            })
+            .catch((error)=>{
+                console.log(error);
+            })
         }else  {
             setWrong(true)
         }
@@ -60,7 +70,7 @@ const onSubmit = (data) => {
                 <form action="" onSubmit={handleSubmit(onSubmit)}>
                     <div className='my-2'>
                          <label className='font-bold' htmlFor="">Full Name</label><br />
-                        <input {...register("Name")} type="text" pattern="[A-Za-z]+" title="Only alphabetic characters are allowed" placeholder='John Doe' className={`h-[30px] rounded w-full mt-3 focus:border-black focus:ring-0 caret-red-700`}/>
+                        <input {...register("Name")} type="text" pattern="[A-Za-z]+ [A-Za-z]+" title="Only alphabetic characters are allowed" placeholder='John Doe' className={`h-[30px] rounded w-full mt-3 focus:border-black focus:ring-0 caret-red-700`}/>
                         <p className='text-red-600'>{errors.Name?.message}</p>
                     </div>
 

@@ -7,12 +7,10 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { MdErrorOutline } from 'react-icons/md';
 import axios from 'axios';
 
-
 const Password = () => {
   const [match, setMatch] = useState('');
-  const [exist, setExist] = useState(false)
-  const endpoint = 'http://localhost:4232/signup/'
-  
+  const [exist, setExist] = useState(false);
+  const endpoint = 'http://localhost:4232/signup/';
 
   let dispatch = useDispatch();
   const store = useSelector((state) => state.adminReducer.adminSign);
@@ -21,7 +19,7 @@ const Password = () => {
     if (store) {
       setValue('password', store.password);
     }
-  }, []);
+  }, [store]); // Include 'store' as a dependency for useEffect
 
   const Schema = yup.object().shape({
     password: yup
@@ -54,18 +52,21 @@ const Password = () => {
     if (myData.password === myData.confirm) {
       // Only store the password in the form data
       let form = { password: myData.password };
-      axios.post(endpoint,store)
-      .then((result)=>{
-        if(result.data.status==true){
-          dispatch(handleNextStep(form));
-        }else if(result.data.status==false && result.data.err.code==11000){
-          console.log(result);
-          setExist(true)
-        }
-      })
-      .catch((error)=>{
-        console.log(error);
-      })
+      axios.post(endpoint, store)
+        .then((result) => {
+          if (result.data.status === false && result.data.err.code === 11000) {
+            console.log(result);
+            setExist(true);
+          } else {
+            // Only dispatch to the next step when both conditions are met
+            if (exist) {
+              dispatch(handleNextStep(form));
+            }
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     } else {
       setMatch('Password do not match');
     }
@@ -98,8 +99,12 @@ const Password = () => {
               className={`border border-black h-[40px] mt-3 rounded w-full`}
             />
             <p className="text-red-600">{errors.confirm?.message}</p>
-            <p className="text-red-600 my-1">{exist?'Email Already Exists, Kindly go back to Previous Pages' : match}</p>
-          <small>{exist}</small>
+            <p className="text-red-600 my-1">
+              {exist
+                ? 'Email Already Exists, Kindly go back to Previous Pages'
+                : match}
+            </p>
+            <small>{exist}</small>
           </div>
           <button
             onClick={() => dispatch(handlePreviousStep())}
