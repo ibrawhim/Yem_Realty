@@ -52,20 +52,12 @@ const Password = () => {
     if (myData.password === myData.confirm) {
       // Only store the password in the form data
       let form = { password: myData.password };
+      dispatch(handleNextStep(form));
       axios.post(endpoint, store)
-        .then((result) => {
-          if (result.data.status === false && result.data.err.code === 11000) {
-            console.log(result);
-            setExist(true);
-          } else {
-            // Only dispatch to the next step when both conditions are met
-            if (exist) {
-              dispatch(handleNextStep(form));
-            }
-          }
+      .then(() => {
         })
         .catch((error) => {
-          console.log(error);
+          setExist(error.response.data.message);
         });
     } else {
       setMatch('Password do not match');
@@ -83,7 +75,7 @@ const Password = () => {
             <br />
             <input
               {...register('password')}
-              type="password"
+              type="text"
               className={`border border-black h-[40px] mt-3 rounded w-full`}
             />
             <p className="text-red-600">{errors.password?.message}</p>
@@ -95,16 +87,14 @@ const Password = () => {
             <br />
             <input
               {...register('confirm')}
-              type="password"
+              type="text"
               className={`border border-black h-[40px] mt-3 rounded w-full`}
             />
             <p className="text-red-600">{errors.confirm?.message}</p>
             <p className="text-red-600 my-1">
-              {exist
-                ? 'Email Already Exists, Kindly go back to Previous Pages'
-                : match}
+              {match}
             </p>
-            <small>{exist}</small>
+            <small className='text-red-600'>{exist}</small>
           </div>
           <button
             onClick={() => dispatch(handlePreviousStep())}

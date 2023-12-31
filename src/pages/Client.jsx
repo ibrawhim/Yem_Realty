@@ -34,9 +34,9 @@ const Client = () => {
 const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/
 const passReg = /^(?=.*[0-9])(?=.*[a-zA-Z]).{8,}$/
 const Schema = yup.object().shape({
-    Name: yup.string().required( <span className='flex'><span className='mt-1 me-1'><MdErrorOutline /></span> <span>Field is Required</span></span> ),
-    Email: yup.string().email('Invalid email format').required( <span className='flex'><span className='mt-1 me-1'><MdErrorOutline /></span> <span>Field is Required</span></span> ),
-    Phone: yup.string().required(<span className='flex'><span className='mt-1 me-1'><MdErrorOutline /></span> <span>Field is Required</span></span>).matches(phoneRegExp, 'Invalid phone').min(11),
+    name: yup.string().required( <span className='flex'><span className='mt-1 me-1'><MdErrorOutline /></span> <span>Field is Required</span></span> ),
+    email: yup.string().email('Invalid email format').required( <span className='flex'><span className='mt-1 me-1'><MdErrorOutline /></span> <span>Field is Required</span></span> ),
+    phone: yup.string().required(<span className='flex'><span className='mt-1 me-1'><MdErrorOutline /></span> <span>Field is Required</span></span>).matches(phoneRegExp, 'Invalid phone').min(11),
     password: yup.string().required(<span className='flex'><span className='mt-1 me-1'><MdErrorOutline /></span> <span>Field is Required</span></span>).matches(/^(?=.*[0-9])/, 'Password must contain at least one digit').matches(/^(?=.*[a-zA-Z])/, 'Password must contain at least one letter').min(8, 'Password must be at least 8 characters long'),
     confirm: yup.string().required( <span className='flex'><span className='mt-1 me-1'><MdErrorOutline /></span> <span>Field is Required</span></span> )
 })
@@ -70,28 +70,28 @@ const onSubmit = (data) => {
                 <form action="" onSubmit={handleSubmit(onSubmit)}>
                     <div className='my-2'>
                          <label className='font-bold' htmlFor="">Full Name</label><br />
-                        <input {...register("Name")} type="text" pattern="[A-Za-z]+ [A-Za-z]+" title="Only alphabetic characters are allowed" placeholder='John Doe' className={`h-[30px] rounded w-full mt-3 focus:border-black focus:ring-0 caret-red-700`}/>
-                        <p className='text-red-600'>{errors.Name?.message}</p>
+                        <input {...register("name")} type="text" pattern="[A-Za-z]+ [A-Za-z]+" title="Only alphabetic characters are allowed" placeholder='John Doe' className={`h-[30px] rounded w-full mt-3 focus:border-black focus:ring-0 caret-red-700`} name='name'/>
+                        <p className='text-red-600'>{errors.name?.message}</p>
                     </div>
 
                     <div className='my-2'>
                         <label className='font-bold' htmlFor="">Email Address</label><br />
-                        <input {...register("Email")} type="text" placeholder='johndoe@gmail.com' className={`border border-black h-[30px] mt-3 rounded w-full focus:ring-0 focus:border-black caret-red-700`}/>
-                        <p className='text-red-600'>{errors.Email?.message}</p>
+                        <input {...register("email")} type="text" placeholder='johndoe@gmail.com' className={`border border-black h-[30px] mt-3 rounded w-full focus:ring-0 focus:border-black caret-red-700`} name='email'/>
+                        <p className='text-red-600'>{errors.email?.message}</p>
                     </div>
                     <div className='my-2'>
                         <label className='font-bold' htmlFor="">Phone</label><br />
-                        <input {...register("Phone")} type="number" placeholder='08012345678' className={`border border-black h-[30px] mt-3 rounded w-full focus:ring-0 focus:border-black caret-red-700`} />
-                        <p className='text-red-600'>{errors.Phone?.message}</p>
+                        <input {...register("phone")} type="number" placeholder='08012345678' className={`border border-black h-[30px] mt-3 rounded w-full focus:ring-0 focus:border-black caret-red-700`} name='phone'/>
+                        <p className='text-red-600'>{errors.phone?.message}</p>
                     <div className='my-2 relative'>
                          <label className='font-bold' htmlFor="">Password</label><br />
-                        <input {...register("password")}  type={passwordVisible ? 'text' : 'password'} className={`border border-black h-[30px] rounded w-full mt-3 focus:ring-0 focus:border-black caret-red-700`}/>
+                        <input {...register("password")}  type={passwordVisible ? 'text' : 'password'} className={`border border-black h-[30px] rounded w-full mt-3 focus:ring-0 focus:border-black caret-red-700`} name='password'/>
                         <span onClick={() => togglePasswordVisibility('password')} className='absolute top-[40px] right-1'>{!passwordVisible ? <BsEyeSlashFill /> : <IoEyeSharp />}</span>
                         <p className='text-red-600'>{errors.password?.message}</p>
                     </div>
                     <div className='my-2 relative'>
                          <label className='font-bold' htmlFor="">confirm</label><br />
-                        <input {...register("confirm")}  type={confirmVisible ? 'text' : 'password'} className={`border border-black h-[30px] rounded w-full mt-3 focus:ring-0 focus:border-black caret-red-700`}/>
+                        <input {...register("confirm")}  type={confirmVisible ? 'text' : 'password'} className={`border border-black h-[30px] rounded w-full mt-3 focus:ring-0 focus:border-black caret-red-700`} name='confirm'/>
                         <span onClick={() => togglePasswordVisibility('confirm')} className='absolute top-[40px] right-1'>{!confirmVisible ? <BsEyeSlashFill /> : <IoEyeSharp />}</span>
                         <p className='text-red-600'>{wrong==true ? 'Password do not match' : errors.confirm?.message}</p>
                     </div>
