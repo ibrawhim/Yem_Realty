@@ -49,10 +49,10 @@ const Password = () => {
   });
 
   const onSubmit = (myData) => {
+    let form = { password: myData.password };
+    dispatch(handleNextStep(form));
     if (myData.password === myData.confirm) {
       // Only store the password in the form data
-      let form = { password: myData.password };
-      dispatch(handleNextStep(form));
       console.log(store);
       axios.post(endpoint, store)
       .then(() => {
