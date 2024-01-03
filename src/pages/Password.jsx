@@ -53,6 +53,7 @@ const Password = () => {
       // Only store the password in the form data
       let form = { password: myData.password };
       dispatch(handleNextStep(form));
+      console.log(store);
       axios.post(endpoint, store)
       .then(() => {
         })
@@ -99,7 +100,7 @@ const Password = () => {
           <button
             onClick={() => dispatch(handlePreviousStep())}
             className="bg-red-700 text-white rounded p-2 mt-[35%]"
-          >
+          >  
             Previous
           </button>
           <button
