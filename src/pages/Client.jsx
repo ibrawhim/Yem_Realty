@@ -50,6 +50,7 @@ const onSubmit = (data) => {
     if(isCheckboxChecked==true) {
         if (data.password===data.confirm){
             setLoading(true)
+            setExist(false)
             console.log(data)
 
             axios.post(endpoint, data)
