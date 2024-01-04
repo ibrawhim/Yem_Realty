@@ -18,7 +18,8 @@ const Client = () => {
     const [confirmVisible, setConfirmVisible] = useState(false);
     const [wrong, setWrong] = useState(false)
     const [isCheckboxChecked, setIsCheckboxChecked] = useState(false)
-    const [terms, setTerms] = useState('')
+    const [terms, setTerms] = useState(false)
+    const [exist, setExist] = useState('')
 
     let endpoint = 'http://localhost:4232/client/signup/'
 
@@ -52,13 +53,18 @@ const onSubmit = (data) => {
                 console.log(result);
             })
             .catch((error)=>{
-                console.log(error);
+                if(error.response.status){
+                    setExist('Email Already Exist')
+                }else {
+                    setExist('')
+                    console.log(error);
+                }
             })
         }else  {
             setWrong(true)
         }
     }else {
-        setTerms('Accept Terms and Policy!!!')
+        setTerms(true)
     }
     }
     return (
@@ -101,7 +107,7 @@ const onSubmit = (data) => {
                     <input type="checkbox" onChange={() => setIsCheckboxChecked(!isCheckboxChecked)}  className='mt-1 me-1'/>
                     <p>Creating an account means you agreed with our <Link className='underline text-red-500' to="/termsandconditions">Terms of Services</Link> and <Link className='underline text-red-500' to="/privacy">Private Policy</Link> Settings</p>
                 </div>
-                    <div className='text-red-400 text-center font-bold'>{terms}</div>
+                    <div className='text-red-400 text-center font-bold'>{terms? "Accept terms and conditions" : ''}</div>
                     <button type='submit' className=' bg-red-500 w-full text-white py-1 px-3 my-4 font-bold rounded'>Create Account</button>
                 </form>
                 </div>
