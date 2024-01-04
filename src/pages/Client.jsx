@@ -9,6 +9,7 @@ import '../App.css'
 import { IoEyeSharp } from "react-icons/io5";
 import { BsEyeSlashFill } from "react-icons/bs";
 import axios from 'axios';
+import loaderIt from '../images/mylload.gif'
 
 
 
@@ -19,7 +20,8 @@ const Client = () => {
     const [wrong, setWrong] = useState(false)
     const [isCheckboxChecked, setIsCheckboxChecked] = useState(false)
     const [terms, setTerms] = useState(false)
-    const [exist, setExist] = useState('')
+    const [exist, setExist] = useState(false)
+    const [loading, setLoading] = useState(false)
 
     let endpoint = 'http://localhost:4232/client/signup/'
 
@@ -47,16 +49,20 @@ const { register, handleSubmit, setValue, formState: { errors }, } = useForm({
 const onSubmit = (data) => {
     if(isCheckboxChecked==true) {
         if (data.password===data.confirm){
+            setLoading(true)
             console.log(data)
+
             axios.post(endpoint, data)
             .then((result)=>{
+                setLoading(false)
                 console.log(result);
             })
             .catch((error)=>{
+                setLoading(false)
                 if(error.response.status){
-                    setExist('Email Already Exist')
+                    setExist(true)
                 }else {
-                    setExist('')
+                    setExist(false)
                     console.log(error);
                 }
             })
@@ -83,7 +89,7 @@ const onSubmit = (data) => {
                     <div className='my-2'>
                         <label className='font-bold' htmlFor="">Email Address</label><br />
                         <input {...register("email")} type="text" placeholder='johndoe@gmail.com' className={`border border-black h-[30px] mt-3 rounded w-full focus:ring-0 focus:border-black caret-red-700`} name='email'/>
-                        <p className='text-red-600'>{errors.email?.message}</p>
+                        <p className='text-red-600'>{exist? 'Email Already Exist' : errors.email?.message}</p>
                     </div>
                     <div className='my-2'>
                         <label className='font-bold' htmlFor="">Phone</label><br />
@@ -108,7 +114,7 @@ const onSubmit = (data) => {
                     <p>Creating an account means you agreed with our <Link className='underline text-red-500' to="/termsandconditions">Terms of Services</Link> and <Link className='underline text-red-500' to="/privacy">Private Policy</Link> Settings</p>
                 </div>
                     <div className='text-red-400 text-center font-bold'>{terms? "Accept terms and conditions" : ''}</div>
-                    <button type='submit' className=' bg-red-500 w-full text-white py-1 px-3 my-4 font-bold rounded'>Create Account</button>
+                    <button type='submit' className=' bg-red-500 w-full text-white py-2 px-3 my-4 font-bold rounded flex justify-center'>{loading?<img src={loaderIt} width={25} alt="" /> : "Create Account"}</button>
                 </form>
                 </div>
                 <div className=' hidden lg:block md:block w-1/2  lg:h-[500px] md:h-full'>
