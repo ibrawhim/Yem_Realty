@@ -32,8 +32,8 @@ const AdminSignUp = () => {
     Lastname: yup.string().required( <span className='flex'><span className='mt-1 me-1'><MdErrorOutline /></span> <span>Field is Required</span></span> )
 })
 
-  const { register, handleSubmit, setValue, formState: { errors }, } = useForm({
-    resolver: yupResolver(Schema)
+const { register, handleSubmit, setValue, formState: { errors }, } = useForm({
+  resolver: yupResolver(Schema)
 })
 
 const onSubmit = (data) => {
